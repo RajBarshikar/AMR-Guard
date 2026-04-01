@@ -48,7 +48,7 @@ India is the world's largest consumer of antibiotics. Yet there is **no scalable
 | 📚 **Knowledge Capsules** | Bite-sized AMR education: what it is, why it matters, how you help |
 | 🔐 **Anonymous Tracking** | Device-token based — zero personal data, no Aadhaar, no phone number |
 | 📱 **QR Disposal Verification** | Pharmacy-verifiable QR codes creating an auditable disposal chain |
-| 🌐 **Bilingual** | English + Marathi (Phase 1), expandable to all 22 scheduled languages |
+| 🌐 **Bilingual** | English & Marathi (Phase 1), expandable to all 22 scheduled languages |
 | 📴 **Offline-First** | Scans queue in IndexedDB and auto-sync when connectivity returns |
 | 🌙 **Dark Mode** | Full theme support — light and dark — with smooth transitions |
 
