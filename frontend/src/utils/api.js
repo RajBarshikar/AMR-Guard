@@ -1,6 +1,6 @@
 import { saveToOfflineQueue, saveScanResult } from './offlineQueue';
 
-const API_BASE = '/api/v1';
+const API_BASE = 'https://amr-guard-api.onrender.com/api/v1';
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 async function apiFetch(path, opts = {}) {

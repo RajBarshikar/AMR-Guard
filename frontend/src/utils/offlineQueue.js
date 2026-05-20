@@ -82,7 +82,7 @@ export async function syncOfflineQueue() {
       const formData = new FormData();
       formData.append('file', submission.imageBlob, `scan-${submission.id}.jpg`);
 
-      const response = await fetch('/api/v1/analyze-medication', {
+      const response = await fetch('https://amr-guard-api.onrender.com/api/v1/analyze-medication', {
         method: 'POST',
         body: formData,
       });
