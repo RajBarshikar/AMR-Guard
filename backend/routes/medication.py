@@ -421,13 +421,21 @@ async def analyze_medication(
                 client = genai_new.Client(api_key=gemini_key)
                 prompt = (
                     "You are a medical OCR assistant. Carefully examine this medication image (strip, box, or blister pack).\n"
-                    "Extract the following fields:\n"
-                    "- drug_name: exact brand/generic name printed on the pack\n"
-                    "- salt_name: active ingredient / salt (if shown)\n"
-                    "- expiry_date: expiry date in format MM/YYYY or YYYY-MM (null if not visible)\n"
-                    "- batch: batch/lot number (null if not visible)\n"
-                    "- manufacturer: manufacturer name (null if not visible)\n"
-                    "Return ONLY valid JSON with these keys. No explanation, no markdown."
+                    "Extract the following fields exactly as they appear on the packaging. Do not guess or infer any drug class, active ingredient, or expiry date if it is not visibly printed.\n"
+                    "- drug_name: exact brand or generic name printed on the pack\n"
+                    "- salt_name: active ingredient / salt name if shown, otherwise null\n"
+                    "- expiry_date: expiry date in format MM/YYYY or YYYY-MM if visible, otherwise null\n"
+                    "- batch: batch/lot number if visible, otherwise null\n"
+                    "- manufacturer: manufacturer name if visible, otherwise null\n"
+                    "Return ONLY valid JSON with these keys. No explanation, no markdown, no additional keys.\n"
+                    "Example output:\n"
+                    "{\n"
+                    "  \"drug_name\": \"Fluka-150\",\n"
+                    "  \"salt_name\": \"Fluconazole\",\n"
+                    "  \"expiry_date\": \"08/2026\",\n"
+                    "  \"batch\": null,\n"
+                    "  \"manufacturer\": \"Cipla\"\n"
+                    "}"
                 )
                 response = client.models.generate_content(
                     model="gemini-2.0-flash",
@@ -435,6 +443,8 @@ async def analyze_medication(
                         genai_types.Part.from_bytes(data=contents, mime_type="image/jpeg"),
                         prompt,
                     ],
+                    temperature=0,
+                    max_output_tokens=250,
                 )
                 raw_text = response.text.strip()
             except ImportError:
@@ -507,7 +517,16 @@ async def analyze_medication(
 
     # ── Fallback mock if OCR not available or failed ──────────────────────────
     if drug is None:
-        drug = random.choice(DRUG_DATABASE)
+        drug = {
+            "name": "Unknown medication",
+            "type": "Unknown",
+            "is_antibiotic": False,
+            "class": "Unknown",
+            "hazard": 5,
+            "amr_resistance_pct": 0,
+            "persistence": "Could not identify the medication from the image. Please verify the scanned label or use manual entry.",
+        }
+        confidence = 0.35
 
     expiry_info = _compute_expiry_risk(drug["name"], expiry_date_str, drug["is_antibiotic"])
 
