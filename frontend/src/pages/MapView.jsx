@@ -4,6 +4,7 @@ import L from 'leaflet';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
+import { getNearestBins } from '../utils/api';
 import Icons from '../components/Icons';
 
 // ── Leaflet default icon fix ────────────────────────────────────────────────
@@ -30,7 +31,7 @@ const verifiedIcon = new L.DivIcon({
   className: '', iconSize: [34, 34], iconAnchor: [17, 17],
 });
 
-// 🔵 Blue: Nearby Pharmacy from Overpass
+// 🔵 Blue: Nearby Pharmacy from backend lookup
 const pharmacyIcon = new L.DivIcon({
   html: `<div style="width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#60a5fa);display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(59,130,246,0.35);border:2px solid white;">
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
@@ -116,39 +117,25 @@ export default function MapView() {
   const [radius, setRadius]             = useState(5000);
   const [error, setError]               = useState(null);
 
-  // ── Fetch from Overpass ────────────────────────────────────────────────────
+  // ── Fetch nearby centres via backend proxy ───────────────────────────────────
   const fetchPharmacies = useCallback(async (lat, lng, radiusM) => {
     setLoadingPharm(true);
     setError(null);
     try {
-      const query = `[out:json][timeout:20];node["amenity"="pharmacy"](around:${radiusM},${lat},${lng});out body;`;
-      const res = await fetch('https://overpass-api.de/api/interpreter', {
-        method: 'POST',
-        body: query,
-      });
-      if (!res.ok) throw new Error(`Overpass HTTP ${res.status}`);
-      const data = await res.json();
-      const results = (data.elements || [])
-        .filter(e => e.lat && e.lon)
-        .map(e => ({
-          id: `osm-${e.id}`,
-          name: e.tags?.name || 'Pharmacy',
-          address: [
-            e.tags?.['addr:housenumber'],
-            e.tags?.['addr:street'],
-            e.tags?.['addr:city'],
-          ].filter(Boolean).join(', ') || 'Address not listed',
-          phone: e.tags?.phone || e.tags?.['contact:phone'] || null,
-          lat: e.lat,
-          lng: e.lon,
-          type: 'osm_pharmacy',
-          distance_km: getDistKm(lat, lng, e.lat, e.lon),
-        }))
-        .sort((a, b) => a.distance_km - b.distance_km)
-        .slice(0, 15);
+      const data = await getNearestBins(lat, lng);
+      const results = (data || []).map((e, index) => ({
+        id: e.id || `osm-${index}`,
+        name: e.name || 'Pharmacy',
+        address: e.address || 'Address not listed',
+        phone: e.phone || null,
+        lat: e.lat,
+        lng: e.lng,
+        type: e.type || 'osm_pharmacy',
+        distance_km: e.distance_km ?? 0,
+      }));
       setPharmacies(results);
     } catch (e) {
-      console.error('[Overpass] Error:', e);
+      console.error('[NearestBins] Error:', e);
       setError('Could not load nearby pharmacies. Check your connection.');
     } finally {
       setLoadingPharm(false);
@@ -315,7 +302,7 @@ export default function MapView() {
               ))}
             </MapContainer>
 
-            {/* Overpass loading overlay */}
+            {/* Pharmacy loading overlay */}
             {loadingPharm && (
               <div className="absolute inset-0 bg-black/20 flex items-center justify-center z-[999] rounded-2xl backdrop-blur-sm">
                 <div className="bg-white dark:bg-gray-800 rounded-2xl px-5 py-4 flex items-center gap-3 shadow-xl">
