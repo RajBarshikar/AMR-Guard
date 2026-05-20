@@ -450,7 +450,7 @@ async def analyze_medication(
                 import io
                 from PIL import Image
                 genai_old.configure(api_key=gemini_key)
-                model = genai_old.GenerativeModel("gemini-1.5-flash")
+                model = genai_old.GenerativeModel("gemini-2.0-flash")
                 img = Image.open(io.BytesIO(contents))
                 prompt = (
                     """
