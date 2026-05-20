@@ -421,20 +421,14 @@ async def analyze_medication(
                 client = genai_new.Client(api_key=gemini_key)
                 prompt = (
                     "You are a medical OCR assistant. Carefully examine this medication image (strip, box, or blister pack).\n"
-                    "Extract the following fields exactly as they appear on the packaging. Do not guess or infer any drug class, active ingredient, or expiry date if it is not visibly printed.\n"
-                    "- drug_name: exact brand or generic name printed on the pack\n"
-                    "- salt_name: active ingredient / salt name if shown, otherwise null\n"
-                    "- expiry_date: expiry date in format MM/YYYY or YYYY-MM if visible, otherwise null\n"
-                    "- batch: batch/lot number if visible, otherwise null\n"
-                    "- manufacturer: manufacturer name if visible, otherwise null\n"
+                    "Extract only the medicine name and the expiry date if it is clearly visible on the packaging. Do not infer or invent any other details.\n"
+                    "- drug_name: exact brand or generic medicine name printed on the pack\n"
+                    "- expiry_date: visible expiry date in format MM/YYYY or YYYY-MM, otherwise null\n"
                     "Return ONLY valid JSON with these keys. No explanation, no markdown, no additional keys.\n"
                     "Example output:\n"
                     "{\n"
                     "  \"drug_name\": \"Fluka-150\",\n"
-                    "  \"salt_name\": \"Fluconazole\",\n"
-                    "  \"expiry_date\": \"08/2026\",\n"
-                    "  \"batch\": null,\n"
-                    "  \"manufacturer\": \"Cipla\"\n"
+                    "  \"expiry_date\": \"08/2026\"\n"
                     "}"
                 )
                 response = client.models.generate_content(
@@ -444,7 +438,7 @@ async def analyze_medication(
                         prompt,
                     ],
                     temperature=0,
-                    max_output_tokens=250,
+                    max_output_tokens=180,
                 )
                 raw_text = response.text.strip()
             except ImportError:
@@ -458,10 +452,8 @@ async def analyze_medication(
                 prompt = (
                     "You are a medical OCR assistant. Extract from this medication image:\n"
                     "- drug_name: brand or generic name\n"
-                    "- salt_name: active ingredient (null if not visible)\n"
-                    "- expiry_date: in MM/YYYY format (null if not visible)\n"
-                    "- batch: batch number (null if not visible)\n"
-                    "Return ONLY valid JSON. No markdown, no explanation."
+                    "- expiry_date: in MM/YYYY or YYYY-MM format if visible, otherwise null\n"
+                    "Return ONLY valid JSON with these keys. No markdown, no explanation."
                 )
                 response = model.generate_content([prompt, img])
                 raw_text = response.text.strip()
@@ -478,17 +470,38 @@ async def analyze_medication(
             ocr_name = ocr_raw.get("drug_name") or ocr_raw.get("salt_name")
             ocr_exp  = ocr_raw.get("expiry_date")
 
-            # Normalise expiry date → YYYY-MM
+            # Normalise expiry date → YYYY-MM when possible
             if ocr_exp:
-                parts = str(ocr_exp).replace("-", "/").split("/")
-                if len(parts) == 2 and len(parts[0]) == 2:          # MM/YYYY
-                    expiry_date_str = f"{parts[1]}-{parts[0].zfill(2)}"
-                elif len(parts) == 2 and len(parts[0]) == 4:        # YYYY/MM
-                    expiry_date_str = f"{parts[0]}-{parts[1].zfill(2)}"
-                elif len(parts) == 3:                                # DD/MM/YYYY
-                    expiry_date_str = f"{parts[2]}-{parts[1].zfill(2)}-{parts[0].zfill(2)}"
+                value = str(ocr_exp).strip()
+                value = re.sub(r"[\s\.]+", " ", value)
+                month_names = {
+                    'jan': '01', 'feb': '02', 'mar': '03', 'apr': '04', 'may': '05', 'jun': '06',
+                    'jul': '07', 'aug': '08', 'sep': '09', 'oct': '10', 'nov': '11', 'dec': '12',
+                }
+
+                if '/' in value or '-' in value:
+                    parts = re.split(r'[/-]', value)
+                    if len(parts) == 2 and len(parts[0]) == 2 and len(parts[1]) == 4:          # MM/YYYY
+                        expiry_date_str = f"{parts[1]}-{parts[0].zfill(2)}"
+                    elif len(parts) == 2 and len(parts[0]) == 4 and len(parts[1]) == 2:        # YYYY/MM
+                        expiry_date_str = f"{parts[0]}-{parts[1].zfill(2)}"
+                    elif len(parts) == 2 and len(parts[0]) == 2 and len(parts[1]) == 2:        # MM/YY
+                        expiry_date_str = f"20{parts[1]}-{parts[0].zfill(2)}"
+                    elif len(parts) == 3 and len(parts[0]) == 2 and len(parts[1]) == 2 and len(parts[2]) == 4:  # DD/MM/YYYY
+                        expiry_date_str = f"{parts[2]}-{parts[1].zfill(2)}"
+                    else:
+                        expiry_date_str = value
                 else:
-                    expiry_date_str = str(ocr_exp)
+                    pieces = value.split(' ')
+                    if len(pieces) == 2:
+                        mon = pieces[0].lower()[:3]
+                        year = pieces[1]
+                        if mon in month_names and year.isdigit() and len(year) == 4:
+                            expiry_date_str = f"{year}-{month_names[mon]}"
+                        else:
+                            expiry_date_str = value
+                    else:
+                        expiry_date_str = value
 
             if ocr_name:
                 drug = _fuzzy_match_drug(ocr_name)

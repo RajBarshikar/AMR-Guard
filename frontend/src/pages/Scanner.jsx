@@ -141,7 +141,15 @@ export default function Scanner() {
     if (streamRef.current) streamRef.current.getTracks().forEach((t) => t.stop());
     const { result: res, offline } = await analyzeMedication(blob, district);
     if (offline) setPhase('offline');
-    else { setResult(res); setPhase('result'); }
+    else {
+      navigate('/takeback', {
+        state: {
+          drugName: res?.drug_name || '',
+          expiryDate: res?.expiry_date || '',
+          isAntibiotic: res?.is_antibiotic || false,
+        },
+      });
+    }
   };
 
   const handleRetake = () => { setResult(null); setCapturedImage(null); setPhase('camera'); startCamera(); };
