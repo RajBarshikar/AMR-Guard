@@ -9,7 +9,6 @@ import math
 import uuid
 import difflib
 import re
-import base64
 import requests
 from datetime import datetime, timezone, date
 from typing import List, Optional
@@ -96,63 +95,6 @@ def _get_medicine_data(name: str) -> Optional[dict]:
         return None
 
 
-def _run_google_cloud_vision_ocr(contents: bytes, api_key: str) -> Optional[str]:
-    try:
-        encoded_content = base64.b64encode(contents).decode("utf-8")
-        url = f"https://vision.googleapis.com/v1/images:annotate?key={api_key}"
-        payload = {
-            "requests": [
-                {
-                    "image": {"content": encoded_content},
-                    "features": [{"type": "TEXT_DETECTION", "maxResults": 1}],
-                }
-            ]
-        }
-        response = requests.post(url, json=payload, timeout=10)
-        if response.status_code != 200:
-            print(f"[AMR-Guard] Google Vision API returned {response.status_code}: {response.text}")
-            return None
-
-        data = response.json()
-        resp = data.get("responses", [{}])[0]
-        text = resp.get("fullTextAnnotation", {}).get("text")
-        if not text:
-            annotations = resp.get("textAnnotations", [])
-            if annotations:
-                text = annotations[0].get("description")
-
-        return text.strip() if text else None
-    except Exception as e:
-        print(f"[AMR-Guard] Google Vision OCR failed: {e}")
-        return None
-
-
-def _find_drug_name_in_text(text: str) -> Optional[str]:
-    text_lower = text.lower()
-    for d in DRUG_DATABASE:
-        if d["name"].lower() in text_lower:
-            return d["name"]
-
-    # fallback to a likely first line from the OCR text
-    for line in text.splitlines():
-        clean_line = line.strip()
-        if len(clean_line) >= 3 and any(ch.isalpha() for ch in clean_line):
-            return clean_line
-    return None
-
-
-def _find_expiry_in_text(text: str) -> Optional[str]:
-    patterns = [
-        r"\b\d{2}[/-]\d{4}\b",
-        r"\b\d{4}[/-]\d{2}\b",
-        r"\b\d{2}[/-]\d{2}\b",
-        r"\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*[ .,-]*\d{4}\b",
-    ]
-    for pattern in patterns:
-        match = re.search(pattern, text, flags=re.IGNORECASE)
-        if match:
-            return match.group(0)
-    return None
 
 
 def _calculate_bioaccumulation(xlogp: float) -> int:
@@ -446,12 +388,12 @@ class LeaderboardEntry(BaseModel):
 
 @router.get("/gemini-status")
 async def gemini_status():
-    """Returns whether Google Cloud Vision API is configured and active."""
-    key = os.getenv("GOOGLE_CLOUD_VISION_API_KEY", "AIzaSyBIBlbyxojbL6vw4Av_cSKERBNKpISOvGA")
-    active = bool(key)
+    """Returns whether Gemini Vision API is configured and active."""
+    key = os.getenv("GEMINI_API_KEY", "")
+    active = bool(key) and key != "your_gemini_api_key_here"
     return {
         "active": active,
-        "model": "Google Cloud Vision" if active else None,
+        "model": "gemini-2.0-flash" if active else None,
         "mode": "AI Vision OCR" if active else "Demo Mode (mock data)",
     }
 
@@ -461,7 +403,7 @@ async def analyze_medication(
     district: Optional[str] = Form(None)
 ):
     """
-    Scan a medication image. OCR via Google Cloud Vision if API key is set, otherwise mock.
+    Scan a medication image. OCR via Gemini if API key is set, otherwise mock.
     Awards +10 pts (or +25 for antibiotic) to device if device_id header present.
     """
     contents = await file.read()
@@ -471,40 +413,131 @@ async def analyze_medication(
     expiry_date_str = None
     confidence = round(random.uniform(0.82, 0.95), 2)
 
-    vision_key = os.getenv("GOOGLE_CLOUD_VISION_API_KEY", "AIzaSyBIBlbyxojbL6vw4Av_cSKERBNKpISOvGA")
-    if vision_key and len(contents) > 100:
+    gemini_key = os.getenv("GEMINI_API_KEY", "")
+    if gemini_key and gemini_key != "your_gemini_api_key_here" and len(contents) > 100:
         try:
-            ocr_text = _run_google_cloud_vision_ocr(contents, vision_key)
-            if ocr_text:
-                ocr_raw = {"text": ocr_text}
-                ocr_name = _find_drug_name_in_text(ocr_text)
-                ocr_exp = _find_expiry_in_text(ocr_text)
+            import json, re
 
-                if ocr_exp:
-                    expiry_date_str = ocr_exp
+            # ── Try new google-genai SDK first ──────────────────────────────
+            try:
+                from google import genai as genai_new
+                from google.genai import types as genai_types
+                client = genai_new.Client(api_key=gemini_key)
+                prompt = ("""You are a medical label OCR tool.
+                            Look at this medicine packaging image.
+                            Extract ONLY:
+                            1. The medicine name (brand or generic, exactly as printed)
+                            2. The expiry date if visible
 
-                if ocr_name:
-                    drug = _fuzzy_match_drug(ocr_name)
-                    if drug:
-                        confidence = 0.96   # High confidence: known drug confirmed by OCR
+                            Respond with ONLY this JSON, nothing else, no explanation:
+                            {"drug_name": "...", "expiry_date": "MM/YYYY or null"}
+
+                            If you cannot read the medicine name clearly, set drug_name to null.
+                            Do not guess. Do not add any text outside the JSON.""")
+                response = client.models.generate_content(
+                    model="gemini-2.0-flash",
+                    contents=[
+                        genai_types.Part.from_bytes(data=contents, mime_type="image/jpeg"),
+                        prompt,
+                    ],
+                    temperature=0,
+                    max_output_tokens=180,
+                )
+                raw_text = response.text.strip()
+            except ImportError:
+                # ── Fall back to legacy google-generativeai SDK ──────────────
+                import google.generativeai as genai_old
+                import io
+                from PIL import Image
+                genai_old.configure(api_key=gemini_key)
+                model = genai_old.GenerativeModel("gemini-1.5-flash")
+                img = Image.open(io.BytesIO(contents))
+                prompt = (
+                    """
+                    You are a medical label OCR tool.
+                            Look at this medicine packaging image.
+                            Extract ONLY:
+                            1. The medicine name (brand or generic, exactly as printed)
+                            2. The expiry date if visible
+
+                            Respond with ONLY this JSON, nothing else, no explanation:
+                            {"drug_name": "...", "expiry_date": "MM/YYYY or null"}
+
+                            If you cannot read the medicine name clearly, set drug_name to null.
+                            Do not guess. Do not add any text outside the JSON.
+                    """
+                )
+                response = model.generate_content([prompt, img])
+                raw_text = response.text.strip()
+
+            # ── Parse JSON from response ─────────────────────────────────────
+            # Strip markdown code fences if present
+            raw_text = re.sub(r"```json|```", "", raw_text).strip()
+            # Extract first JSON object if there's surrounding text
+            json_match = re.search(r'\{.*?\}', raw_text, re.DOTALL)
+            if json_match:
+                raw_text = json_match.group(0)
+            ocr_raw = json.loads(raw_text)
+
+            ocr_name = ocr_raw.get("drug_name") or ocr_raw.get("salt_name")
+            ocr_exp  = ocr_raw.get("expiry_date")
+
+            # Normalise expiry date → YYYY-MM when possible
+            if ocr_exp:
+                value = str(ocr_exp).strip()
+                value = re.sub(r"[\s\.]+", " ", value)
+                month_names = {
+                    'jan': '01', 'feb': '02', 'mar': '03', 'apr': '04', 'may': '05', 'jun': '06',
+                    'jul': '07', 'aug': '08', 'sep': '09', 'oct': '10', 'nov': '11', 'dec': '12',
+                }
+
+                if '/' in value or '-' in value:
+                    parts = re.split(r'[/-]', value)
+                    if len(parts) == 2 and len(parts[0]) == 2 and len(parts[1]) == 4:          # MM/YYYY
+                        expiry_date_str = f"{parts[1]}-{parts[0].zfill(2)}"
+                    elif len(parts) == 2 and len(parts[0]) == 4 and len(parts[1]) == 2:        # YYYY/MM
+                        expiry_date_str = f"{parts[0]}-{parts[1].zfill(2)}"
+                    elif len(parts) == 2 and len(parts[0]) == 2 and len(parts[1]) == 2:        # MM/YY
+                        expiry_date_str = f"20{parts[1]}-{parts[0].zfill(2)}"
+                    elif len(parts) == 3 and len(parts[0]) == 2 and len(parts[1]) == 2 and len(parts[2]) == 4:  # DD/MM/YYYY
+                        expiry_date_str = f"{parts[2]}-{parts[1].zfill(2)}"
                     else:
-                        display_name = ocr_name.strip().title()
-                        drug = {
-                            "name": display_name,
-                            "type": "Tablet",
-                            "is_antibiotic": any(
-                                kw in ocr_name.lower()
-                                for kw in ["cillin", "mycin", "cycline", "floxacin", "oxacin",
-                                           "azole", "conazole", "sulfa", "antibiotic", "bacteria"]
-                            ),
-                            "class": "Prescription Drug",
-                            "hazard": 6,
-                            "amr_resistance_pct": 0,
-                            "persistence": f"{display_name} was detected via OCR scan. Dispose at a SafeDrop pharmacy as a precaution.",
-                        }
-                        confidence = 0.78
+                        expiry_date_str = value
+                else:
+                    pieces = value.split(' ')
+                    if len(pieces) == 2:
+                        mon = pieces[0].lower()[:3]
+                        year = pieces[1]
+                        if mon in month_names and year.isdigit() and len(year) == 4:
+                            expiry_date_str = f"{year}-{month_names[mon]}"
+                        else:
+                            expiry_date_str = value
+                    else:
+                        expiry_date_str = value
+
+            if ocr_name:
+                drug = _fuzzy_match_drug(ocr_name)
+                if drug:
+                    confidence = 0.96   # High confidence: known drug confirmed by Gemini
+                else:
+                    # Unknown — create a generic entry from OCR text
+                    display_name = ocr_name.strip().title()
+                    drug = {
+                        "name": display_name,
+                        "type": "Tablet",
+                        "is_antibiotic": any(
+                            kw in ocr_name.lower()
+                            for kw in ["cillin", "mycin", "cycline", "floxacin", "oxacin",
+                                       "azole", "conazole", "sulfa", "antibiotic", "bacteria"]
+                        ),
+                        "class": "Prescription Drug",
+                        "hazard": 6,
+                        "amr_resistance_pct": 0,
+                        "persistence": f"{display_name} was detected via AI scan. Dispose at a SafeDrop pharmacy as a precaution.",
+                    }
+                    confidence = 0.78
         except Exception as e:
-            print(f"[AMR-Guard] Google Cloud Vision failed: {e} — falling back to mock")
+            print(f"[AMR-Guard] Gemini Vision failed: {e} — falling back to mock")
             ocr_raw = None
 
     # ── Fallback mock if OCR not available or failed ──────────────────────────
@@ -533,7 +566,7 @@ async def analyze_medication(
         "is_antibiotic": drug["is_antibiotic"],
         "eco_hazard_score": drug["hazard"],
         "confidence": confidence,
-        "source": "google_cloud_vision" if ocr_raw else "mock",
+        "source": "gemini_vision" if ocr_raw else "mock",
         "expiry_date": expiry_date_str,
         "expiry_status": expiry_info["expiry_status"],
         "ers_data": expiry_info.get("ers_data"),
