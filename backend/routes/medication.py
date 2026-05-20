@@ -450,10 +450,19 @@ async def analyze_medication(
                 model = genai_old.GenerativeModel("gemini-1.5-flash")
                 img = Image.open(io.BytesIO(contents))
                 prompt = (
-                    "You are a medical OCR assistant. Extract from this medication image:\n"
-                    "- drug_name: brand or generic name\n"
-                    "- expiry_date: in MM/YYYY or YYYY-MM format if visible, otherwise null\n"
-                    "Return ONLY valid JSON with these keys. No markdown, no explanation."
+                    """
+                    You are a medical label OCR tool.
+                            Look at this medicine packaging image.
+                            Extract ONLY:
+                            1. The medicine name (brand or generic, exactly as printed)
+                            2. The expiry date if visible
+
+                            Respond with ONLY this JSON, nothing else, no explanation:
+                            {"drug_name": "...", "expiry_date": "MM/YYYY or null"}
+
+                            If you cannot read the medicine name clearly, set drug_name to null.
+                            Do not guess. Do not add any text outside the JSON.
+                    """
                 )
                 response = model.generate_content([prompt, img])
                 raw_text = response.text.strip()
