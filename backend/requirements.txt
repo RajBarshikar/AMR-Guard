@@ -3,7 +3,7 @@ uvicorn==0.30.6
 python-multipart==0.0.9
 pillow==10.4.0
 requests==2.31.0
-pytesseract==0.3.11
+pytesseract==0.3.10
 python-dotenv==1.0.1
 slowapi==0.1.9
 google-generativeai==0.8.3
