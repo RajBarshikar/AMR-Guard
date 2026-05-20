@@ -419,17 +419,17 @@ async def analyze_medication(
                 from google import genai as genai_new
                 from google.genai import types as genai_types
                 client = genai_new.Client(api_key=gemini_key)
-                prompt = (
-                    "You are a medical OCR assistant. Carefully examine this medication image (strip, box, or blister pack).\n"
-                    "Extract only the medicine name and the expiry date if it is clearly visible on the packaging. Do not infer or invent any other details.\n"
-                    "- drug_name: exact brand or generic medicine name printed on the pack\n"
-                    "- expiry_date: visible expiry date in format MM/YYYY or YYYY-MM, otherwise null\n"
-                    "Return ONLY valid JSON with these keys. No explanation, no markdown, no additional keys.\n"
-                    "Example output:\n"
-                    "{\n"
-                    "  \"drug_name\": \"Fluka-150\",\n"
-                    "  \"expiry_date\": \"08/2026\"\n"
-                    "}"
+                prompt = ("""You are a medical label OCR tool.
+                            Look at this medicine packaging image.
+                            Extract ONLY:
+                            1. The medicine name (brand or generic, exactly as printed)
+                            2. The expiry date if visible
+
+                            Respond with ONLY this JSON, nothing else, no explanation:
+                            {"drug_name": "...", "expiry_date": "MM/YYYY or null"}
+
+                            If you cannot read the medicine name clearly, set drug_name to null.
+                            Do not guess. Do not add any text outside the JSON."""
                 )
                 response = client.models.generate_content(
                     model="gemini-2.0-flash",
