@@ -115,7 +115,7 @@ def _extract_text_tesseract(contents: bytes) -> str:
         text = pytesseract.image_to_string(img, lang="eng", config="--psm 6")
         return text.strip()
     except Exception as e:
-        print(f"[AMR-Guard] Tesseract OCR failed: {e}")
+        print(f"[AMR-Shield] Tesseract OCR failed: {e}")
         return ""
 
 
@@ -178,7 +178,7 @@ def _parse_medication_text_via_groq(text: str) -> dict:
             timeout=15,
         )
         if response.status_code != 200:
-            print(f"[AMR-Guard] Groq parse failed: {response.status_code} {response.text}")
+            print(f"[AMR-Shield] Groq parse failed: {response.status_code} {response.text}")
             return result
 
         data = response.json()
@@ -194,7 +194,7 @@ def _parse_medication_text_via_groq(text: str) -> dict:
                 "expiry_date": parsed.get("expiry_date"),
             }
     except Exception as e:
-        print(f"[AMR-Guard] Groq parse exception: {e}")
+        print(f"[AMR-Shield] Groq parse exception: {e}")
 
     return result
 
@@ -578,10 +578,10 @@ async def analyze_medication(
                     }
                     confidence = 0.78
         except Exception as e:
-            print(f"[AMR-Guard] Tesseract/Groq parsing failed: {e} — falling back to mock")
+            print(f"[AMR-Shield] Tesseract/Groq parsing failed: {e} — falling back to mock")
             ocr_raw = None
     else:
-        print("[AMR-Guard] No OCR text extracted from image")
+        print("[AMR-Shield] No OCR text extracted from image")
 
     # ── Fallback mock if OCR not available or failed ──────────────────────────
     if drug is None:
@@ -1011,7 +1011,7 @@ async def nearest_bins(lat: float = Query(...), lng: float = Query(...)):
                 centres.sort(key=lambda x: x.distance_km)
                 return centres[:5]
     except Exception as e:
-        print(f"[AMR-Guard] Overpass API failed: {e} — using fallback")
+        print(f"[AMR-Shield] Overpass API failed: {e} — using fallback")
 
     # ── Fallback: offset-based mock data ────────────────────────────────────
     centres = []

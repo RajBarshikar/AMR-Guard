@@ -28,14 +28,14 @@ except Exception:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("[AMR-Guard] Starting up...")
+    print("[AMR-Shield] Starting up...")
     yield
-    print("[AMR-Guard] Shutting down...")
+    print("[AMR-Shield] Shutting down...")
 
 
 app = FastAPI(
-    title="AMR-Guard API",
-    description="Backend API for antimicrobial resistance medication disposal — AMR-Guard",
+    title="AMR-Shield API",
+    description="Backend API for antimicrobial resistance medication disposal — AMR-Shield",
     version="2.0.0",
     lifespan=lifespan,
 )
@@ -69,7 +69,7 @@ app.include_router(pharmacy_router,   prefix="/api/v1", tags=["Pharmacy"])
 @app.get("/")
 async def root():
     return {
-        "message": "AMR-Guard API is running",
+        "message": "AMR-Shield API is running",
         "version": "2.0.0",
         "docs": "/docs",
     }
@@ -92,7 +92,7 @@ async def health():
 # ---------------------------------------------------------------------------
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
-    print(f"[AMR-Guard] Unhandled error on {request.url}: {exc}")
+    print(f"[AMR-Shield] Unhandled error on {request.url}: {exc}")
     return JSONResponse(
         status_code=500,
         content={"success": False, "message": "Internal server error", "detail": str(exc)},

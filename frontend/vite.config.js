@@ -11,8 +11,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['pill.svg', 'icon-192.png', 'icon-512.png'],
       manifest: {
-        name: 'AMR-Guard — Secure Disposal. Stronger Medicine.',
-        short_name: 'AMR-Guard',
+        name: 'AMR-Shield — Secure Disposal. Stronger Medicine.',
+        short_name: 'AMR-Shield',
         description: 'Scan medications, check their Eco-Hazard score, and find SafeDrop Pharmacies near you.',
         theme_color: '#0d9488',
         background_color: '#0f172a',

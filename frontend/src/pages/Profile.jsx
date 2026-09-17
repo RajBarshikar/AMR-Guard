@@ -50,8 +50,8 @@ export default function Profile() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'AMR-Guard Achievement',
-          text: `I just earned the ${meta.label} badge on AMR-Guard for safely disposing of medicines! Join me in fighting Antimicrobial Resistance.`,
+          title: 'AMR-Shield Achievement',
+          text: `I just earned the ${meta.label} badge on AMR-Shield for safely disposing of medicines! Join me in fighting Antimicrobial Resistance.`,
           url: window.location.origin
         });
         await awardPoints(deviceId, 20, `Shared ${meta.label} badge on social media`);
@@ -61,7 +61,7 @@ export default function Profile() {
         console.log('Share failed or cancelled:', err);
       }
     } else {
-      alert(`I earned the ${meta.label} badge on AMR-Guard! (Sharing is not supported on this browser)`);
+      alert(`I earned the ${meta.label} badge on AMR-Shield! (Sharing is not supported on this browser)`);
     }
   };
 
@@ -381,7 +381,7 @@ export default function Profile() {
 
       {/* Footer */}
       <div className="mt-8 text-center pb-2">
-        <p className="text-[11px] font-medium text-tertiary">AMR-Guard v2.0</p>
+        <p className="text-[11px] font-medium text-tertiary">AMR-Shield v2.0</p>
       </div>
     </div>
   );

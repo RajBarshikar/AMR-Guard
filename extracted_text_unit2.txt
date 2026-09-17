@@ -1,0 +1,2203 @@
+=== PAGE 1 ===
+ELIMINATION
+“* Introduction
+“+ Drug metabolism and basic
+understanding metabolic pathways
+“+ Renal excretion of drugs
+
+“* Factors affecting renal excretion
+
+“+ Renal clearance
+
+“+ Non-renal routes of drug excretion
+
+
+=== PAGE 2 ===
+Q) INTRODUCTION
+
+The onset of pharmacological response depends upon two
+pharmacokinetic processes-
+
+v Drug absorption, and
+
+v Drug distribution.
+
+The duration and intensity of action depend upon -
+
+Y Tissue redistribution of drug, and
+
+Y The rate of drug removal from the body/site of action, i.e. rate of |
+
+elimination.
+
+Elimination is the major process for removal of a drug from the body
+and termination of its action. It is defined as the irreversible loss of
+drug from the body. Elimination occurs by two processes viz.
+biotransformation and excretion.
+
+Biotransformation of drugs is defined as the chemical conversion of
+one form to another. The term is used synonymously with metabolism.
+The chemical changes are usually affected enzymatically in the body and
+thus, the definition excludes chemical instability of a drug within the body.
+
+Q) DRUG METABOLISM “AND BASIC UNDERSTANDING
+
+METABOLIC PATHWAYS
+
+Normally results in pharmacological inactivation of drugs, i.e. it results
+in formation of metabolites with little or no pharmacological activity. |
+Occasionally yields metabolites with equal activity.
+
+Rarely leads to toxicological activation of drugs, i.e. it results in
+
+formation of metabolites with high tissue reactivity.
+
+
+=== PAGE 3 ===
+° Inactive drugs (prodrugs) also depend upon biotransformation for
+
+activation, the process being called as pharmacological activation; e.g.
+
+conversion of enalapril to enalaprilat.
+
+Liver is the primary site for metabolism of almost all drugs because of
+
+its relative richness in possessing a large variety of enzymes in large
+
+amounts.
+
+° Metabolism by organs other than liver (called as extrahepatic
+
+metabolism) is of minor importance since lower level of drug
+
+metabolising enzymes are present in such tissues.
+
+° The decreasing order of drug metabolising ability of various organs is:
+
+Liver > Lungs > Kidneys > Intestine > Placenta > Adrenals > Skin
+
+The enzymes that biotransform xenobiotics differ from those that
+
+metabolise food materials. They are versatile and non-specific in
+
+metabolising a large number of drugs.
+
+°® The enzymes are broadly divided into 2 categories:
+
+¥ Microsomal enzymes
+
+v¥ Non-microsomal enzymes.
+|
+
+> The microsomal enzymes catalyse a majority of drug
+
+biotransformation reactions. The microsomes are basically artefacts which ©
+
+resulted when attempts were first made to isolate endoplasmic |
+
+reticulum of the liver homogenate. The large variety of microsomal
+enzymes catalyse a number of oxidative, reductive and hydrolytic and
+
+glucuronidation reactions.
+
+
+=== PAGE 4 ===
+> The non-microsomal enzymes include those that are present in
+
+soluble form in the cytoplasm and those attached to the mitochondria
+
+but not to endoplasmic reticulum. These are also non-specific enzymes
+
+that catalyse few oxidative reactions, a number of reductive and
+
+hydrolytic reactions and _ conjugation reactions other than
+
+glucuronidation.
+
+The leading pioneer in drug biotransformation research, divided the |
+
+pathways of drug metabolism reactions into two general categories.
+
+Y Phase I reactions, and
+
+Y Phase Il reactions.
+
+Phase _I Reactions These reactions generally precede phase II
+
+reactions and include oxidative, reductive and hydrolytic reactions.
+
+° By way of these reactions, a polar functional group is either introduced or
+
+unmasked if already present on the otherwise lipid soluble substrate,
+e.g. -OH, -COOH, - NH; and -SH. Thus, phase | reactions are also called as
+
+functionalisation reactions.
+
+° The resulting product of phase I reaction is susceptible to phase II
+
+reactions.
+
+Phase_II_ Reactions These reactions generally involve covalent
+
+attachment of small polar endogenous molecules such as glucuronic
+
+acid, sulphate, glycine, etc. to either unchanged drugs or phase I products
+
+having suitable functional groups viz. -OH, -COOH, -NH, and -SH and
+
+form highly water soluble conjugates which are readily excretable by the
+
+kidneys (or bile). Thus, these reactions are called as conjugation
+
+reactions.
+
+
+=== PAGE 5 ===
+QO RENAL EXCRETION OF DRUGS
+
+* Almost all drugs and their metabolites are excreted by the kidneys to
+
+some extent or the other.
+
+Some drugs such as gentamicin are exclusively eliminated by renal route
+
+only. Agents that are excreted in urine are -
+
+1. Water-soluble.
+
+2. Non-volatile.
+
+3. Small in molecular size (less than 500 Daltons).
+
+4. The ones that are metabolised slowly.
+
+© The basic functional unit of kidney involved in excretion is the nephron.
+
+Each kidney comprises of one million nephrons. Each nephron is made up
+
+of the glomerulus, the proximal tubule, the loop of Henle, the distal
+
+tubule and the collecting tubule.
+
+© The principal processes that determine the urinary excretion ofa drug are
+
+1. Glomerular filtration.
+
+2. Active tubular secretion.
+
+3. Active or passive tubular reabsorption.
+
+Glomerular filtration and active tubular secretion tend to increase the |
+
+concentration of drugs in lumen and hence facilitate excretion whereas
+|
+|
+tubular reabsorption decreases it and prevents the movement of drug |
+out of the body.
+
+Thus, the rate of excretion can be given by equation:
+
+
+=== PAGE 6 ===
+Glomerulus Glomerular filtration of
+water and unbound
+drugs and metabolites
+
+Active tubular secretion
+of acidic and basic drugs
+Proximal Tubule ————— and metabolites
+
+Active reabsorption of
+
+acidic and basic
+
+endogenous compounds
+
+and passive reabsorption
+Loop of Henle of lipophilic drugs
+
+Urinary excretion of
+drugs and metabolites
+that are filtered and/or
+actively secreted and
+not reabsorbed
+
+Distal Tubule
+Collecting Tubule
+“ Glomerular Filtration
+
+* It Is non selective, unidirectional process.
+
+* lonized or unionized drugs are filtered, except those that are bound to
+
+plasma proteins.
+
+Driving force for GF is hydrostatic pressure of blood flowing in capillaries.
+
+Glomerular filtration rate:
+Out of 25% of cardiac out put or 1.2 liters of blood /min that goes to the
+kidney via renal artery only 10% or 120 to 130ml/min is filtered
+through glomeruli.
+
+The rate being called as glomerular filtration rate (GFR).
+
+e.g. creatinine, inulin.
+
+
+=== PAGE 7 ===
+This mainly occurs in proximal tubule.
+
+It is carrier mediated process which requires energy for transportation
+
+of compounds against conc. Gradient.
+
+Two secretion mechanisms are identified.
+
+v System for secretion of organic acids/anions E.g. Penicillin,
+salicylates etc. uric acid secreted.
+
+v System for organic base / cations E.g. morphine, mecamylamine
+hexamethonium.
+
+Active secretion is Unaffected by change in pH and protein binding Drug
+
+undergoes active secretion have excretion rate values greater than normal
+
+GFR e.g. Penicillin.
+
+Tubular reabsorption
+
+It occurs after the glomerular filtration of drugs. It takes place all along
+
+the renal tubules.
+
+Reabsorption of drugs indicated when the excretion rate value are less
+
+than the GFR 130ml/min. e.g. Glucose
+
+TR can be active or passive processes.
+
+Reabsorption results in increase in the half life of the drug.
+Active Tubular Reabsorption:
+Its commonly seen with endogenous substances or nutrients that the
+
+body needs to conserve e.g. electrolytes, glucose, vitamins.
+
+Passive Tubular Reabsorption:
+
+It is common for many exogenous substances including drugs.
+The driving force is Conc. Gradient which is due to re-absorption of. ,
+
+water, sodium and inorganic ions.
+
+
+=== PAGE 8 ===
+7
+
+Since a majority of drugs are weak electrolytes (weak acids or weak
+
+|
+bases), diffusion of such agents through the lipoidal tubular membrane |
+
+depend upon the degree of ionisation which in turn depends on three
+
+factors:
+
+1. pH of the urine.
+2. pKa of the drug.
+
+3. Urine flow rate.
+
+pH of the urine
+
+It varies between 4.5 to 7.5
+
+It depends upon diet, drug intake and pathophysiology of the patient.
+
+Acetazolamide and antacids produce alkaline urine, while ascorbic
+
+acid makes it acidic.
+
+IV infusion of sodium and ammonium chloride used in treatment of acid
+
+base imbalance shows alteration in urine pH.
+* Relative amount of ionized, unionized drug in the urine at particular pH &
+% drug ionized at this pH can be given by " HENDERSON-HESSELBACH"
+
+equation.
+
+Henderson-Hesselbach equation
+1) For weak base .
+
+[unionized]
+pH=pKa + log “Tionized] _
+
+10 pH — pKa
+
+% of drug ionized =
+1+10pH —pka
+
+x 100
+
+2) For weakacid
+
+\ [ionized]
+il iadiin, [unionized]
+
+10 pH — pKa
+
+1+10pH —pka * uaa
+
+% of drug ionized =
+
+
+=== PAGE 9 ===
+Y Drug pKa:
+
+The significance of pH dependent excretion for any particular compound is
+greatly dependent upon its pKa and lipid solubility.
+A characteristic of drugs, pKa values govern the degree of ionisation at a
+
+particular pH.
+
+A polar and ionised drug will be poorly reabsorbed passively and |
+
+excreted rapidly.
+Reabsorption is also affected by the lipid solubility of drug; an ionised |
+but lipophilic drug will be reabsorbed while an unionised but polar |
+
+one will be excreted.
+
+Y urine Flow Rate:
+
+In addition to urine pH and drug pKa, the rate of urine flow also
+influences the extent of reabsorption.
+
+Polar drugs whose excretion is independent of urine pH and are not
+reabsorbed, are unaffected by urine flow rate.
+
+An increase in urine flow in case of such drugs will only produce more
+dilute urine.
+
+Only those drugs whose reabsorption is pH-sensitive, for example, weak
+acids and weak bases, show dependence on urine flow rate. For such
+agents, reabsorption is inversely proportional to the urinary flow.
+
+Urine flow rate can be increased by forced diuresis. Forced diuresis is the
+increase in urine flow induced by large fluid intake or administration
+of mannitol or other diuretics.
+
+Both urine pH control and forced diuresis can be used to treat toxicity —
+
+with drug overdose.
+
+
+=== PAGE 10 ===
+QO) FACTORS AFFECTING RENAL EXCRETION
+
+® Apart from the three physiologic processes that govern the urinary
+
+excretion, other factors influencing renal clearance of drugs and ©
+metabolites are:
+
+Physicochemical properties of the drug
+
+2. Plasma concentration of the drug
+3. Distribution and binding characteristics of the drug
+4. Urine pH
+
+5. Blood flow to the kidneys
+6. Biological factors
+
+7. Drug interactions
+
+8. Disease states
+
+Important physicochemical factors affecting renal excretion of a drug are -
+
+Molecular size, pKa and lipid solubility.
+
+The molecular weight of a drug is very critical in its urinary
+
+elimination. An agent of small molecular size can be easily filtered
+
+through the glomerulus. Compounds of weights below 300 Daltons, if
+
+water-soluble, are readily excreted by the kidneys.
+The influence of drug pKa Urinary excretion of an unchanged drug is |
+inversely related to its lipophilicity. This is because, a lipophilic drug is
+passively reabsorbed to a large extent.
+Stereochemical nature of the drug may also influence renal clearance.
+If a drug exhibits stereoselective protein binding then the drug
+
+enantiomers would exhibit differential filtration rates.
+
+
+=== PAGE 11 ===
+| * Plasma concentration of the drug
+
+Glomerular filtration and reabsorption are directly affected by plasma
+
+drug concentration since both are passive processes.
+
+A drug that is not bound to plasma proteins and excreted by filtration
+
+only, shows a linear relationship between rate of excretion and plasma drug
+concentration. |
+In case of drugs which are secreted or reabsorbed actively, the rate
+process increases with an increase in plasma concentration to a point
+when saturation of carrier occurs.
+
+In case of actively reabsorbed drugs, excretion is negligible at low plasma
+concentrations. Such agents are excreted in urine only when their
+concentration in the glomerular filtrate exceeds the active reabsorption
+capacity, e.g. glucose.
+
+With drugs that are actively secreted, the rate of excretion increases
+
+with increase in plasma concentration up toa saturation level.
+
+Rate of Excsetion
+
+———» Plasma Drug Concentration
+
+
+=== PAGE 12 ===
+Clearance is inversely related to apparent volume of distribution of |
+
+drugs.
+
+A drug with large Vd is poorly excreted in urine.
+
+Drugs restricted to blood compartment have higher excretion rates.
+Drugs that are bound to plasma proteins behave as macromolecules
+and thus cannot be filtered through the glomerulus.
+
+Only unbound or free drug appear in the glomerular filtrate.
+
+Blood Flow to the Kidneys
+
+The renal blood flow is important in case of drugs excreted by
+glomerular filtration only and those that are actively secreted.
+
+In the latter case, increased perfusion increases the contact of drug
+with the secretory sites and enhances their elimination. Renal
+
+clearance in such instances is said to be perfusion rate-limited.
+
+Biological Factors
+
+Age, sex, species and strain differences, differences in the genetic
+make-up, circadian rhythm, etc. alter drug excretion.
+
+Renal excretion is approximately 10% lower in females than in males.
+The renal function of newborns is 30 to 40% less in comparison to adults |
+and attains maturity between 2.5 to 5 months of age.
+
+In old age, the GFR is reduced and tubular function is altered, the excretion
+of drugs is thus slowed down and half-life is prolonged.
+
+D ‘ .
+
+Any drug interaction that result in alteration of binding characteristics,
+renal blood flow, active secretion, urine pH, intrinsic clearance and forced
+
+diuresis would alter renal clearance of drug.
+
+
+=== PAGE 13 ===
+Renal clearance of a drug highly bound to plasma proteins is increased
+
+after it is displaced with other drug e.g. Gentamicin induced
+nephrotoxicity by furosemide.
+
+Alkalinization of urine with citrates and bicarbonates promote excretion of
+acidic drugs.
+
+Disease state
+
+Renal dysfunction
+
+Greatly impairs the elimination of drugs especially those that are primarily
+excreted by kidney. Some of the causes of renal failure are B.P Diabetes,
+Pyelonephritis.
+
+Uremia
+
+Characterized by Impaired GFR, accumulation of fluids & protein
+metabolites, also impairs the excretion of the drugs. Half life is increased
+
+resulting in drug accumulation and increased toxicity.
+
+Q) RENAL CLEARANCE
+
+The clearance concept was first introduced to describe renal excretion of
+endogenous compounds in order to measure the kidney function.
+
+The term is now applied to all organs involved in drug elimination such
+as liver, lungs, the biliary system, etc. and referred to as hepatic
+clearance, pulmonary clearance, biliary clearance and so on.
+
+The sum of individual clearances by all eliminating organs is called as total
+body clearance or total systemic clearance. It is sometimes expressed as
+a sum of renal clearance and nonrenal clearance.
+
+Clearance is defined as the hypothetical volume of body fluids |
+containing drug from which the drug is removed or cleared completely |
+
+in a specific period of time.
+
+
+=== PAGE 14 ===
+It is expressed in ml/min and is a constant for any given plasma drug
+concentration.
+
+In comparison to apparent volume of distribution which relates plasma
+drug concentration to the amount of drug in the body, clearance relates
+
+plasma concentration to the rate of drug elimination.
+
+cl c= Elimination rate
+earance (Cl)= plasma drug concentration
+
+Renal Clearance (Cl): It can be defined as the volume of blood or
+plasma which is completely cleared of the unchanged drug by the
+
+kidney per unit time. It is expressed mathematically as:
+
+Rate of urinary excretion
+
+ch
+*" Plasma drug concentration
+
+Physiologically speaking, renal clearance is the ratio of “sum of rate of
+glomerular filtration and active secretion minus rate of reabsorption”
+
+to “plasma drug concentration C’”.
+
+Rate of filtration Rate of secretion —Rate of reabsorption
+Cc
+
+Clp=
+
+The ratio of these two values is called as renal clearance ratio or excretion
+
+ratio.
+
+: Cl, of drug
+Renal Clearance Ratio = CI, of creatinine
+
+
+=== PAGE 15 ===
+QO) NON-RENAL ROUTES OF DRUG EXCRETION
+
+Drugs and their metabolites may also be excreted by routes other than the
+renal route, called as the extrarenal or nonrenal routes of drug excretion.
+
+The various such excretion processes are:
+
+Biliary excretion
+
+Pulmonary excretion 5- Skin/dermal excretion
+
+Salivary excretion 7. Gastrointestinal excretion
+
+Mammary excretion 8. Genital excretion
+
+Bile juice is secreted by hepatic cells of the liver. The flow is steady- 0.5 |
+
+to 1ml /min.
+
+Its important in the digestion and absorption of fats. 90% of bile acid is
+
+reabsorbed from intestine and transported back to the liver for
+resecretion.
+
+Compounds excreted by this route are sodium, potassium, glucose,
+bilirubin, Glucuronide, sucrose, Inulin, muco-proteins etc.
+
+Compounds that are excreted in bile have been classified into 3
+
+categories on the basis of their bile/plasma concentration ratios:
+
+¥ Group A compounds whose ratio is approximately 1, e.g. sodium,
+potassium and chloride ions and glucose.
+Group B compounds whose ratio is >1, usually from 10 to 1000, e.g.
+bile salts, bilirubin glucuronide, creatinine, sulphobromophthalein
+conjugates, etc.
+Group C compounds with ratio < 1, e.g. sucrose, inulin, phosphates,
+
+phospholipids and mucoproteins.
+
+
+=== PAGE 16 ===
+1.
+>
+
+Physicochemical Properties of the Drug
+Polarity is the other physicochemical property of drug influencing biliary |
+
+excretion. Greater the polarity, better the excretion. Thus, metabolites are |
+
+more excreted in bile than the parent drugs because of their increased
+
+polarity.
+The molecular weight threshold for biliary excretion of drugs is also —
+
+dependent upon its polarity. A threshold of 300 Daltons and greater than _
+300 Daltons is necessary for organic cations (e.g. quaternaries) and organic
+
+anions respectively.
+
+. Nature of Biotransformation Process
+
+Phase-Il reactions mainly glucuronidation and conjugation with |
+glutathione result in metabolites with increased tendency for biliary
+excretion.
+
+Drugs excreted in the bile are chloromphenicol, morphine and
+indomethacin.
+
+Glutathione conjugates have larger molecular weight and so not observed
+in the urine.
+
+Other factors
+
+The efficacy of drug excretion by biliary system can be tested by an agent
+ie. completely eliminated in bile. Example sulfobromophthalein.
+
+This marker is excreted in half an hour in intestine at normal hepatic |
+functioning. Delay in its excretion indicates hepatic and biliary mal |
+
+function. aye .
+Biliary excretion rate
+
+Biliary clearance = ——@£. _____________
+ry Plasma drug concentration
+
+The ability of liver to excrete the drug in the bile is expressed as Biliary
+
+clearance.
+
+
+=== PAGE 17 ===
+* Gaseous and volatile substances such as general anesthetics (Halothane)
+
+are absorbed through lungs by simple diffusion.
+
+* Pulmonary blood flow, rate of respiration and solubility of substance
+
+effect PE. Intact gaseous drugs are excreted but not metabolites.
+
+* Alcohol which has high solubility in blood and tissues are excreted |
+
+slowly by lungs.
+
+° The pH of saliva varies from 5.8 to 8.4.
+
+Unionized lipid soluble drugs are excreted passively.
+
+° The bitter after taste in the mouth of a patient is indication of drug
+
+excreted.
+
+Some basic drugs inhibit saliva secretion and are responsible for mouth
+dryness.
+* Compounds excreted in saliva are Caffeine, Phenytoin, Theophylline.
+
+0.5 to one liter of milk is secreted per day in lactating mothers.
+
+* Excretion of drug in milk is important as it gains entry in breast feeding
+
+infants.
+
+° pH of milk varies from 6.4 to 7.6.
+
+° Freeun-ionized and lipid diffuse passively.
+
+° Highly plasma bound drug like Diazepam is less secreted in milk. Since
+
+milk contains proteins. Drugs excreted can bind to it. |
+
+* Amount of drug excreted in milk is less than 1% and fraction consumed |
+
+by infant is too less to produce toxic effects. Some potent drugs like
+
+barbiturates and morphine may induce toxicity.
+
+
+=== PAGE 18 ===
+° Adverse effects
+Discoloration of teeth with tetracycline and jaundice due to interaction of
+bilirubin with sulfonamides. Nicotine is secreted in the milk of mothers who
+
+smoke.
+
+Drugs excreted through skin via sweat follows pH partition hypothesis.
+Excretion of drugs through skin may lead to urticaria and dermatitis.
+Compounds like benzoic acid, salicylic acid, alcohol and heavy metals like
+lead, mercury and arsenic are excreted in sweat.
+Gastrointestinal excretion
+
+Excretion of drugs through GIT usually occurs after parenteral
+administration.
+
+Water soluble and ionized from of weakly acidic and basic drugs are
+excreted in GIT.
+
+Example are nicotine and quinine are excreted in stomach. Drugs excreted
+
+in GIT are reabsorbed into systemic circulation & undergo recycling.
+
+Genital Ex jon
+
+Reproductive tract and genital secretions may contain the excreted
+
+drugs. Some drugs have been detected in semen.
+
+
+=== PAGE 19 ===
+BIOAVAILABILITY AND
+
+BIOEQUIVALENCE
+
+** Introduction
+
+** Definitions
+
+“* Objectives of bioavailability studies
+
+** Bioavailability—absolute versus
+relative
+
+“* Measurement of bioavailability
+
+“* In vitro drug dissolution testing
+models
+
+“* In vitro—in vivo correlation (IVIVC)
+
+** Bioequivalence studies
+
+** Methods for enhancement of
+
+bioavailability
+
+
+=== PAGE 20 ===
+UO INTRODUCTION
+
+° The therapeutic effectiveness of a drug depends upon the ability of the
+
+dosage form to deliver the medicament to its site of action at a rate
+
+and amount sufficient to elicit the desired pharmacological response.
+
+This attribute of the dosage form is referred to as physiological availability,
+biological availability or simply, bioavailability.
+
+For most drugs, the pharmacological response can be related directly to
+the plasma levels.
+
+° Thus, The rate or rapidity with which a drug is absorbed is an
+important consideration when a rapid onset of action is desired as in
+the treatment of acute conditions such as asthma attack, pain, etc.
+
+A slower absorption rate is, however, desired when the aim is to prolong
+the duration of action or to avoid the adverse effects.
+
+Extent of absorption is of special significance in the treatment of chronic
+conditions like hypertension, epilepsy, etc.
+
+QO DEFINITION
+
+° The term bioavailability is defined as the rate and extent (amount) of |
+
+absorption of unchanged drug from its dosage form. It is an absolute
+term.
+
+* If the size of the dose to be administered is same, then bioavailability of
+a drug from its dosage form depends upon 3 major factors:
+
+1. Pharmaceutical factors related to physicochemical properties of the drug
+
+and characteristics of the dosage form.
+
+2. Patientrelated factors.
+
+3. Route of administration.
+
+
+=== PAGE 21 ===
+The influence of route of administration on drug's bioavailability is
+
+generally in the following order with few exceptions:
+
+Parenteral > Oral > Rectal > Topical
+® Bioequivalence studies are special type of studies where two drugs or two
+
+sets of formulation of the same drug are compared to show that they
+have nearly equal bioavailability and
+Pharmacokinetic/Pharmacodynamics parameters
+
+Q OBJECTIVES OF BIOAVAILABILITY STUDIES
+
+Bioavailability studies are important in the —
+
+1. Primary stages of development of a suitable dosage form for a new
+drug entity to obtain evidence of its therapeutic utility.
+
+2. Determination of influence of excipients, patient related factors and
+possible interaction with other drugs on the efficiency of absorption.
+Development of new formulations of the existing drugs.
+
+4. Control of quality of a drug product during the early stages of
+marketing in order to determine the influence of processing factors,
+storage and stability on drug absorption.
+
+5. Comparison of availability of a drug substance from different dosage
+
+forms or from the same dosage form produced by different
+
+manufacturers.
+
+Q BIOAVAILABILITY—ABSOLUTE VERSUS RELATIVE
+® When the systemic availability of a drug administered orally is
+
+determined in comparison to its intravenous administration, it is
+called as absolute bioavailability. It is denoted by symbol F.
+
+° Its determination is used to characterize a drug‘s inherent absorption
+properties from the i.v. site. Intravenous dose is selected as a standard
+
+because the drug is administered directly into the systemic circulation
+
+|
+|
+
+
+=== PAGE 22 ===
+(100% bioavailability) and avoids absorption step.
+
+Intramuscular dose can also be taken as a standard if the drug is poorly |
+water-soluble.
+
+An oral solution as reference standard has also been used in certain
+cases. However, there are several drawbacks of using oral solution as a ©
+standard instead of an i.v. dose —
+
+1. Limits the pharmacokinetic treatment to one-compartment model
+
+only.
+
+. Differentiation between the fraction of dose unabsorbed and that |
+
+metabolised is difficult.
+. Ifthe rate of oral absorption is not sufficiently greater than the rate
+of elimination.
+Absolute bioavailability (F):
+
+°* When the systemic availability of a drug after oral administration is
+compared with that of an oral standard of the same drug (such as an
+
+aqueous or non-aqueous solution or a suspension), it is referred to as
+
+relative or comparative bioavailability. It is denoted by symbol F, . In |
+
+contrast to absolute bioavailability, it is used to characterize absorption |
+of a drug from its formulation. F and F, are generally expressed in
+
+percentages.
+
+Relative bioavailability (F,):
+
+
+=== PAGE 23 ===
+( MEASUREMENT OF BIOAVAILABILITY —
+
+© The methods useful in quantitative evaluation of bioavailability can be
+
+broadly divided into two categories — pharmacokinetic methods and |
+
+pharmacodynamic methods.
+
+I. Pharmacokinetic Methods These are very widely used and based on |
+
+the assumption that the pharmacokinetic profile reflects the ©
+
+therapeutic effectiveness of a drug. Thus, these are indirect methods.
+
+The two major pharmacokinetic methods are:
+
+a. Plasma level-time studies.
+
+b. Urinary excretion studies.
+
+Il. Pharmacodynamic Methods These methods are complementary to
+
+pharmacokinetic approaches and involve direct measurement of drug
+
+effect on a (patho) physiological process as a function of time. The two
+
+pharmacodynamic methods involve determination of bioavailability from:
+
+a. Acute pharmacological response.
+
+b. Therapeuticresponse.
+
+“+ Plasma level-time studies
+
+* Most common type of human bioavailability studies.
+
+° Based on the assumption that there is a direct relationship between the
+
+concentration of drug in blood or plasma & concentration of drug at
+
+the site of action.
+
+>» Single dose study
+
+Single Oral dose method
+
+* Collection of serial blood samples for a period of 2 to 3 biological half-
+
+lives after drug administration.
+
+° Plot of concentration vs time to obtain the plasma level time profile.
+
+* Atleast 3 points should be taken on the ascending part of the curve for
+
+
+=== PAGE 24 ===
+accurate determination of ka.
+
+Single IV dose method
+
+Sampling should start within 5 minutes of drug administration and
+subsequent samples taken at 15 minute intervals.
+
+Plot of concentration vs time to obtain the plasma level time profile.
+
+To describe disposition phase, at least 3 sample points should be taken if
+the drug follows one- compartment kinetics & 5 to 6 points if it fits
+
+two- compartment model.
+
+Multiple dose study
+
+Drug administration for at least 5 biological half-lives with a dosing
+interval equal to or greater than the biological half-life to reach the |
+steady-state. |
+Ablood sample should be taken at the end of previous dosing interval & 8
+to 10 samples after the administration of next dose.
+
+The 3 parameters of plasma level-time studies which are considered
+
+important for determining bioavailability are:
+
+Cmax: The peak plasma concentration that gives an indication whether
+
+the drug is sufficiently absorbed systemically to provide a therapeutic
+
+response. It is a function of both the rate and extent of absorption. Cmax
+will increase with an increase in the dose, as well as with an increase in the
+
+absorption rate.
+
+. tmax: The peak time that gives an indication of the rate of absorption. It
+
+decreases as the rate of absorption increases.
+
+. AUC: The area under the plasma level-time curve that gives a measure of |
+
+the extent of absorption or the amount of drug that reaches the | |
+systemic circulation. |
+
+
+=== PAGE 25 ===
+at stent ady-state
+
+est
+
+=
+
+9 UopejUBSUOD Bwse|q <——
+
+st Esty
+
+DOSE 57x
+xD
+
+CSSmax
+CSSyuax
+—— Dosing _ES t
+
+Py Bs
+t a old =
+H o|8 Pare s
+&
+3 8 3
+'
+_
+a
+Ss
+1
+= -
+os
+: ©
+a
+3 ©
+
+LS)
+uOHe23UIIU0D
+
+
+=== PAGE 26 ===
+>» Calculation of AUC using the trapezoidal rule
+Area=1/2 (AB+CD)CM
+
+For each trapezoid.
+
+[AUC]=
+AUC tai = AUCoxtrap + AUCo
+
+where AUC extrap = C jast/K «1
+
+“+ Urinary excretion studies
+
+C,+
+
+C
++S ()-t)
+
+AUC segment!
+
+a
+o
+
+n
+3
+
+Concentration (ug/ml)
+
+°
+
+8
+
+°
+
+4 6
+Time (hour)
+
+This method is based on the principle that the urinary excretion of
+unchanged drug is directly proportional to the plasma concentration
+of drug.
+
+It can be performed if At least 20% of administered dose is excreted
+
+unchanged in urine.
+
+The study is useful for
+
+Drugs that extensively excreted unchanged in urine eg. Thiazide diuetics.
+Drugs that have urine as site of action eg. Urinary antiseptics like |
+nitrofurontoin. |
+Steps involved:
+
+Collection of urine at regular intervals for 7 half lives.
+
+Analysis of unchanged drug in collected sample.
+
+Determination of amount of drug at each interval and cumulative as well.
+
+
+=== PAGE 27 ===
+Criteria’s must be followed
+At each sample collection total emptying of bladder is necessary.
+
+Frequent sampling is essential in the beginning to compute correct rate of |
+|
+
+The fraction excreted unchanged in urine must remain constant.
+
+absorption. |
+|
+|
+
+The three major parameters examined in urinary excretion
+data obtained with a single dose study are:
+(dX, /dt)max: The maximum urinary excretion rate, it is obtained
+from the peak of plot between rate of excretion versus midpoint time
+of urine collection period.
+(t,)max: The time for maximum excretion rate, it is analogous to the
+tmax of plasma level data. Its value decreases as the absorption rate —
+increases.
+X, : The cumulative amount of drug excreted in the urine, it is related
+to the AUC of plasma level data and increases as the extent of absorption
+
+increases.
+
+(dX /dl)_..
+
+———> Rate of urinary excretion
+
+(De
+——————_ Midpoint time of urine collection period
+
+
+=== PAGE 28 ===
+The extent of bioavailability can be determined by the following equations
+
+v For single dose study:
+
+_ (Xu Doral Div
+~ (Xu),, Doral
+_ Kueest Dstd |
+
+Fr= ——-—_
+(Xu) sta Deest
+
+When bioavailability measurement by pharmacokinetic methods is
+
+difficult, inaccurate or non-reproducible, an acute pharmacological effect
+
+such as a change in ECG or EEG readings, pupil diameter, etc. is related to
+
+the time course of a given drug.
+* Bioavailability can then be determined by construction of
+pharmacological effect-time curve as well as dose-response graphs.
+The method requires measurement of responses for at least 3
+biological half-lives of the drug in order to obtain a good estimate of
+AUC.
+
+Disadvantages of this method include -
+
+1. The pharmacological response tends to be more variable and accurate
+
+correlation between measured response and drug available from the
+formulation is difficult.
+The observed response may be due to an active metabolite whose
+concentration is not proportional to the concentration of parent drug
+responsible for the pharmacological effect.
+
+eutic Response Method
+
+This method is based on observing the clinical response to a drug
+
+formulation given to patients suffering from disease for which it is
+
+intended to be used. However, the method has several drawbacks -
+
+
+=== PAGE 29 ===
+1. Quantitation of observed response is too improper to allow for
+
+reasonable assessment of relative bioavailability.
+
+2. Bioequivalence studies are usually conducted using a crossover design
+
+in which each subject receives each of the test dosage forms.
+
+3. Unless multiple-dose protocols are employed, a patient who required
+
+the drug for a disease would be able to receive only a single dose of |
+
+the drug every few days or perhaps each week.
+
+4. Many patients receive more than one drug, and the results obtained ©
+
+from a bioavailability study could be compromised because of a drug-
+
+drug interaction.
+
+Q IN VITRO DRUG DISSOLUTION TESTING MODELS
+
+® There are several factors that must be considered in the design of a
+
+dissolution test. They are - |
+
+> Factors relating to the dissolution apparatus such as—the
+
+design, the size of the container, the shape of the container, nature of
+
+agitation, speed of agitation, performance precision of the apparatus etc.
+
+> Factors relating to the dissolution fluid such as—Composition ,
+
+viscosity, volume, temperature (generally 37°C) and maintenance of sink or _
+
+non-sink conditions.
+
+» Process parameters such as method of introduction of dosage form,
+
+sampling techniques, changing the dissolution fluid, etc
+
+The dissolution apparatus has evolved gradually and considerably from a
+
+simple beaker type to a highly versatile and fully automated instrument. The
+
+devices can be classified in a number of ways. Based on the absence or
+
+presence of sink conditions, there are two principal types of dissolution
+
+apparatus:
+
+
+=== PAGE 30 ===
+Closed-compartment apparatus: It is basically a limited-volume
+
+apparatus operating under non-sink conditions. The dissolution fluid is
+
+|
+restrained to the size of the container, e.g. beaker type apparatuses such
+
+as the rotating basket and the rotating paddle apparatus.
+
+Open-compartment (continuous flow-through) apparatus: It |
+
+is the one in which the dosage form is contained in a column which is
+
+brought in continuous contact with fresh, flowing dissolution
+
+medium (perfect sink condition).
+
+It is basically a closed-compartment, beaker type apparatus comprising
+
+of a cylindrical glass vessel with hemispherical bottom of one litre capacity
+
+partially immersed in a water bath to maintain the temperature at
+
+37°C.
+
+Acylindrical basket made of 22 mesh to hold the dosage form is located
+
+centrally in the vessel at a distance of 2 cm from the bottom and
+
+rotated by a variable speed motor through a shaft.
+
+The basket should remain in motion during drawing of samples. All metal |
+parts like basket and shaft are made of SS 316.
+
+Rotating Paddle Apparatus (Apparatus 2)
+
+The assembly is same as that for apparatus 1 except that the rotating
+
+basket is replaced with a paddle which acts as a stirrer .
+
+The dosage form is allowed to sink to the bottom of the vessel. Sinkers are
+
+recommended to prevent floating of capsules and other floatable forms.
+
+A small, loose, wire helix may be attached to such preparations to
+
+prevent them from floating.
+
+
+=== PAGE 31 ===
+This apparatus consists of a set of cylindrical flat-bottomed glass vessels |
+
+equipped with reciprocating cylinders.
+
+The apparatus is particularly used for dissolution testing of controlled
+
+release bead-type (pellet) formulations.
+
+Flow-Through Cell Apparatus (Apparatus 4)
+
+The flow-through apparatus consists of a reservoir for the dissolution
+
+medium and a pump that forces dissolution medium through the cell
+
+holding the test sample.
+
+It may be used in either -
+
+¥ Closed-mode where the fluid is recirculated and, by necessity, is of fixed
+volume, or
+
+Y Open-mode when there is continuous replenishment of the fluids.
+
+Paddle Over Disc Apparatus (Apparatus 5)
+
+This apparatus is used for evaluation of transdermal products and
+
+consists of a sample holder or disc that holds the product.
+
+The disc is placed at the bottom of apparatus 2 and the apparatus operated
+
+in the usual way.
+This apparatus is also used for evaluation of transdermal products and is ©
+similar to apparatus 1.
+
+Instead of basket, a stainless steel cylinder is used to hold the sample.
+
+The sample is mounted on an inert porous cellulosic material and
+
+adhered to the cylinder.
+
+Reciprocating Disc Apparatus (Apparatus 7)
+
+This apparatus is used for evaluation of transdermal products as well as |
+
+non disintegrating controlled-release oral preparations.
+
+=== PAGE 32 ===
+© The samples are placed on disc-shaped holders using inert porous
+
+cellulosic support which reciprocates vertically by means of a drive inside
+
+a glass container containing dissolution medium.
+
+(a) Apparatus 1 (b) Apparatus 2
+
+(cd) Apparatus 4
+
+{c) Apparatus 5 (f) Apparatus 6
+
+ile
+
+rod holder
+
+Teflon
+cylinder
+(g) Apparatus 7 - Reciprocating Holders
+
+
+=== PAGE 33 ===
+Number of Dosage Acceptance Criteria
+Units Tested
+
+No dosage unit is less than Q+5%
+
+Average of the twelve dosage units (S, + S,) 2
+Q% and no dosage unit is less than Q-15%
+
+Average of the twenty four dosage units (S1 +
+$2 + S3) 2 Q%and not more than two dosage
+units are less than Q- 15% and no dosage unit
+is less than Q-25%
+
+IN VITRO—IN VIVO CORRELATION (IVIVC)
+
+Convincing correlation between in vitro dissolution behaviour of a drug and
+
+its in vivo bioavailability must be experimentally demonstrated to
+|
+
+guarantee reproducibility of biologic response.
+
+In vitro-in vivo correlation is defined as the predictive mathematical
+model that describes the relationship between an in-vitro property
+(such as the rate and extent of dissolution) of a dosage form and an in-
+vivo response (such as the plasma drug concentration or amount of
+
+drug absorbed).
+
+The main objective of developing and evaluating an IVIVC is to enable the
+dissolution test to serve as a surrogate (alternate) for in vivo bioavailability
+studies in human beings.
+The applications of developing such an IVIVC are —
+To ensure batch-to-batch consistency in the physiological performance
+of a drug product by use of such in vitro values.
+
+To serve as a tool in the development of a new dosage form with |
+
+desired in vivo performance.
+
+|
+
+To assist in validating or setting dissolution specifications (i.e. the |
+|
+dissolution specifications are based on the performance of product in vivo). |
+
+
+=== PAGE 34 ===
+There are two basic approaches by which a correlation between dissolution
+
+testing and bioavailability can be developed:
+
+ih
+
+By establishing a relationship, usually linear, between the in vitro
+dissolution and the in vivo bioavailability parameters. |
+By using the data from previous bioavailability studies to modify the
+dissolution methodology in order to arrive at meaningful in vitro-in vivo
+
+correlation
+
+Correlations Based on the Plasma Level Data: Here linear
+relationships between dissolution parameters such as percent drug
+dissolved, rate of dissolution, rate constant for dissolution, etc. and
+parameters obtained from plasma level data such as percent drug
+absorbed, rate of absorption, Cmax, tmax, Ka, etc. are developed; for
+example, percent drug dissolved versus percent drug absorbed plots.
+Correlation Based on the Urinary Excretion Data: Here, dissolution
+parameters are correlated to the amount of drug excreted unchanged
+in the urine, cumulative amount of drug excreted asa function of time, etc.
+
+Correlation Based on the Pharmacological Response: An acute
+
+pharmacological effect such as LDs in animals is related to any of the |
+
+dissolution parameters.
+-In vi i ve
+Three IVIVC levels have been defined and categorised in descending order
+
+of usefulness.
+
+
+=== PAGE 35 ===
+> Level A - The highest category of correlation, it represents a point-to- |
+
+point relationship between in vitro dissolution and the in vivo rate of |
+
+absorption (or in vivo dissolution).
+
+Advantages of level A correlation are as follows -
+
+1. A point-to-point correlation is developed. The in vitro dissolution curve
+serves as a surrogate for in vivo performance.
+The in vivo dissolution serves as in vivo indicating quality control
+procedure for predicting dosage form‘s performance.
+Level B - Utilises the principles of statistical moment analysis. The |
+mean in vitro dissolution time is compared to either the mean
+residence time or the mean in vivo dissolution time.
+However, such a correlation is not a point-to-point correlation since there
+are a number of in vivo curves that will produce similar mean residence
+time values.
+It is for this reason that one cannot rely upon level B correlation to justify
+
+changes in manufacturing or modification in formula.
+
+Moreover, the in vitro data cannot be used for quality control |
+
+standards.
+
+Level C - It is a single point correlation.
+
+It relates one dissolution time point (e.g. tso%, etc.) to one
+pharmacokinetic parameter such as AUC, tmax or Cmax.
+
+This level is generally useful only as a guide in formulation development
+or quality control owing to its obvious limitations.
+
+Multiple Level C - It is correlation involving one or several
+pharmacokinetic parameters to the amount of drug dissolved at various
+
+time points.
+
+
+=== PAGE 36 ===
+The Biopharmaceutics Classification System (BCS) is a fundamental |
+
+guideline for determining the conditions under which in-vitro in-vivo |
+
+correlations are expected.
+
+Table indicates whether IVIVC is expected or possible for various drug |
+
+categories when formulated as controlled-release preparations.
+Biopharmaceutics Drug Classification System for Extended Release Drug
+
+Products
+Solubility
+High and site independent
+
+High and site independent
+
+Low and site independent
+
+Low and site independent
+
+Permeability
+High and site
+independent
+
+Dependent on site and
+narrow absorption
+window
+
+High and site
+independent
+
+Dependent on site and
+narrow absorption
+window
+
+Variable
+
+Variable
+
+IVIVC
+
+IVIVC Level A
+expected
+
+IVIVC Level C
+expected
+
+IVIVC Level A
+expected
+
+Little or no IVIVC
+
+Little or no IVIVC
+
+IVIVC Level A
+
+_ expected
+
+According to BCS, in vivo bioavailability and bioequivalence studies need
+
+not be conducted for drug products under following circumstances -
+
+¥ Rapid and similar dissolution.
+
+Y High solubility.
+¥ High permeability.
+
+Y Wide therapeutic window.
+
+vY Excipients used in dosage form.
+
+
+=== PAGE 37 ===
+Q BIOEQUIVALENCE STUDIES
+ Need/Objectives for Biequival Studi
+
+© If a new product is intended to be a substitute for an approved medicinal
+
+product as a pharmaceutical equivalent or alternative, the equivalence
+with this product should be shown or justified.
+
+* In order to ensure clinical performance of such drug _ products,
+
+bioequivalence studies should be performed. Bioequivalence studies are
+
+conducted if there is:
+
+Y Arisk of bio-inequivalence and/or
+
+Y Arisk of pharmacotherapeutic failure or diminished clinical safety.
+
+> Equivalence: It is a relative term that compares drug products with
+
+respect to a specific characteristic or function or to a defined set of
+
+standards. There are several types of equivalences.
+
+> Chemical Equivalence: It indicates that two or more drug products
+
+contain the same labelled chemical substance as an active ingredient
+
+in the same amount.
+
+Pharmaceutical Equivalence: This term implies that two or more drug
+
+products are identical in strength, quality, purity, content uniformity
+
+and disintegration and dissolution characteristics.
+
+> Therapeutic Equivalence: This term indicates that two or more drug
+
+products that contain the same therapeutically active ingredient elicit
+
+identical pharmacological effects and can control the disease to the
+
+same extent.
+
+Bioequivalence can be demonstrated either -
+
+v Invivo,or
+
+Y Invitro.
+
+=== PAGE 38 ===
+> Invi Bi valence Studie:
+
+The following sequence of criteria is useful in assessing the need for in vivo
+
+studies:
+
+Oral immediate release products with systemic action
+
+Indicated for serious conditions requiring assured response.
+
+° Narrow therapeutic margin.
+
+* Pharmacokinetics complicated by absorption < 70% or absorption window,
+nonlinear kinetics, presystemic elimination > 70%
+
+® Unfavourable physiochemical properties, e.g. low solubility, metastable
+modifications, instability, etc.
+
+* Documented evidence for bioavailability problems.
+
+* No relevant data available, unless justification by applicant that in vivo
+
+study is not necessary.
+
+. Non-oral immediate release products.
+
+. Modified release products with systemic action.
+In vitro Bioequivalence Studies
+
+o If none of the above criteria is applicable, comparative in vitro dissolution
+
+studies will suffice.
+
+In vitro studies, i.e. dissolution studies can be used in lieu of in vivo
+
+bioequivalence under certain circumstances, called as biowaivers
+(exemptions) -
+
+1. The drug product differs only in strength of the active substance it |
+
+contains, provided all the following conditions hold -
+
+Pharmacokinetics are linear.
+
+The qualitative composition is the same.
+
+The ratio between active substance and the excipients is the same, or (in the
+
+case of small strengths) the ratio between the excipients is the same.
+
+
+=== PAGE 39 ===
+Both products are produced by the same manufacturer at the same
+
+production site.
+
+original product.
+
+|
+|
+|
+A bioavailability or bioequivalence study has been performed with the |
+|
+|
+
+Under the same test conditions, the in vitro dissolution rate is the same.
+
+. The drug product has been slightly reformulated or the manufacturing |
+method has been slightly modified by the original manufacturer in |
+ways that can convincingly be argued to be irrelevant for the |
+bioavailability.
+
+The drug product meets all of the following requirements -
+
+The product is in the form of solution or solubilised form (elixir, syrup,
+tincture, etc.)
+
+The product contains active ingredient in the same concentration as the
+approved drug product.
+
+The product contains no excipients known to significantly affect absorption
+of the active ingredient
+
+An acceptable IVIVC and the in vitro dissolution rate of the new
+product is equivalent with that of the already approved medicinal
+product. Moreover,
+
+The product is intended for topical administration (cream, ointment, gel, |
+etc.) for local effect. |
+The product is for oral administration but not intended to be absorbed |
+(antacid or radio-opaque medium).
+
+The product is administered by inhalation as a gas or vapour. The criteria
+for drug products listed above indicate that bioavailability and
+
+bioequivalence are self-evident.
+
+
+=== PAGE 40 ===
+* As far as the definition of bioavailability is concerned, a drug with poor
+bioavailability is the one with -
+Poor aqueous solubility and/or slow dissolution rate in biological fluids.
+Poor permeability through the biomembrane owing to inadequate partition
+coefficient or lipophilicity or large molecular size such as that of protein or
+peptide drugs such as insulin.
+Based on the intestinal permeability and solubility of drugs,
+Biopharmaceutics Classification System (BCS) has been developed
+which classifies the drugs into one of the 4 groups.
+The Biopharmaceutics Classification System for Drugs |
+
+Class | Solubility | Permeability | Absorption Examples
+Pattern
+
+I High High Well absorbed Diltiazem, Propranolol
+Metoprolol
+
+ll Low High Variable Nifedipine
+,Carbamazepine,
+Naproxen
+
+Low Variable Insulin, Metformin,
+Cimetidine
+
+Low Poorlyabsorbed _ Taxol ,Chlorthiazide
+,Furosemide
+
+Class I drugs (high solubility/high permeability) are well absorbed |
+
+orally since they have neither solubility nor permeability limitation.
+
+Class If drugs (low solubility/high permeability) show variable
+absorption owing to solubility limitation.
+
+Class HI drugs (high solubility/low permeability) also show variable
+absorption owing to permeability limitation.
+
+Class IV drugs (low solubility/low permeability) are poorly absorbed
+
+orally owing to both solubility and permeability limitations.
+
+
+=== PAGE 41 ===
+> The pharmaceutical Approach
+
+1. Enhancement of drug solubility or dissolution rate
+Enhancement of drug permeability
+Enhancement of drug stability
+
+Enhancement of gastrointestinal retentions.
+
+1) Micronization:
+
+* Reduce the size of solid drug particle to 1-10 microns. It is also called as
+
+micro milling.
+Particle size is reduced by Spray drying or by use of air attrition
+methods (fluid energy or jet mill). Ex Griseofulvin and several steroidal
+and sulpha drugs.
+
+2) Nanonisation:
+
+° The drug powder is converted to nano crystals of sizes 200-600nm.
+
+° Eg amphotericin B Dispersion of drug nano crystals in a liquid (water)
+
+called as nano suspension.
+
+There are 3 technologies use to prepare nanoparticles:
+Pearl milling
+Homogenisation in water (wet milling as in a colloid mill).
+Homogenisation in non aqueous media or in water with water
+miscible liquids.
+
+3) Supercritical fluid recrystallization:
+
+* Supercritical fluids are fluids whose temperature & pressure are greater |
+
+than its critical temperature( Tc) & critical pressure (Tp), allowing it to
+
+assume the properties of both a liquid and gas.
+
+
+=== PAGE 42 ===
+At near critical temperatures, SCFs are highly compressible, allowing |
+
+moderate changes in pressure to greatly alter the density & mass
+
+transport characteristics ofa fluid that largely determine its solvent power.
+
+* Once the drug particles are solubilised within SCF, they may be
+
+recrystallised at greatly reduced particle sizes.
+
+4) Spray freezing into liquid (SFL):
+
+* This technique involves atomizing an aqueous, organic, aqueous- |
+
+organic cosolvent solution, aqueous-organic emulsion or suspension |
+
+containing a drug & pharmaceutical excipients directly into a compressed
+
+gas( CO,, helium, propane, ethane) or the cryogenic liquids(nitrogen, organ
+
+or hydrofluoroethers).
+
+The frozen particles are then lyophilized to obtain dry and free flowing
+
+micronized powders use of acetonitrile as the solvent increases drug
+
+loading &decreases the drying time for lyophilization.
+
+The dissolution rate is remarkably enhanced from the SFL powder
+
+containing amorphous nanostructured aggregates with high surface area &
+
+excellent wettability.
+
+5) Evaporative precipitation into aqueous solution (EPAS):
+
+* The EPAS process utilizes rapid phase separation to nucleate &grow
+
+nanoparticles & microparticles of lipophilic drugs.
+
+* The drug is first dissolved in a low boiling point organic solvent.
+
+* This solution is pumped through a tube where it is heated under |
+
+pressure to a temperature above the solvents boiling point &then
+
+sprayed through a fine atomizing nozzle into a heated aqueous solution.
+
+° Surfactants are added to the organic solution & the aqueous solution to |
+
+optimize particle formation &stabilization.
+
+
+=== PAGE 43 ===
+© In EPAS, the surfactant migrates to the drug-water interface during
+particle formation and the hydrophilic segment is oriented towards the |
+aqueous continuous phase.
+
+® The hydrophilic stabilizer on the surface inhibits crystallization of the |
+growing particles & therefore facilitates dissolution rate.
+
+6) Use of surfactant:
+
+* Surfactants are very useful as absorption enhancers and enhance both |
+
+dissolution rate & permeability of drug.
+
+They enhance dissolution rate primarily by promoting wetting & |
+
+penetration of dissolution fluid into the solid drug particles.
+They are generally used in concentration below their critical micelle
+concentration (CMC) values since above CMC, the drug entrapped in the
+micelle structure fails to partition in the dissolution fluid.
+
+® Nonionic surfactants like polysorbates Steroids like spiranolactones.
+
+7) Use of salt forms:
+
+® Salts have improved solubility & dissolution charecteristics in
+comparison to the original drug.
+It is generally accepted that a minimum difference of 3 units between
+
+the pka value of the group& that of its counter ion is required to form
+
+stable salts. E.g. alkali metal salts of acidic drugs like penicillins &strong
+acid salts of basic drugs like atropine. |
+
+8) Use of precipitation inhibitors:
+
+* A significant increase in free drug concentration above equilibrium
+solubility results in supersaturation, which can lead to drug
+precipitation or crystallization.
+
+* This can be prevented by use of inert polymers such as HPMC, PVP, PVA, |
+
+PEG, etc. Which act by one or more mechanisms.
+
+=== PAGE 44 ===
+In the crystallization rate of drugs Provide a steric barrier to drug
+molecules & inhibit crystallization through specific intermolecular
+
+interactions on growing crystal surfaces.
+
+9) Alteration of pH of drug microenvironment:
+
+* In situ salt formation
+
+* Addition of buffers to the formulation
+
+* Eg. Buffered aspirin tablets.
+
+10) Use of amorphs, anhydrates, solvates and metastable polymorphs:
+
+® Depending upon the internal structure of the solid drug, selection of
+proper form of drug with greater solubility is important.
+
+° In general, amorphs are more soluble than metastable polymorphs, |
+anhydrates are more soluble than hydrates & solvates are more soluble
+than non-solvates.
+
+12) Precipitation:
+
+® The poorly aqueous soluble drugs such as cyclosporine is dissolved in a
+suitable organic solvent followed by its rapid mixing with a non-
+solvent to effect precipitation of drug in nanosize particles.
+
+° The product so prepared is also called as hydrosol.
+
+13) Selective absorption on insoluble carriers:
+
+* A highly active adsorbent such as the inorganic clays like bentonite can
+enhance the dissolution rate of poorly water soluble drugs like
+griseofulvin, indomethacin & prednisone by maintaining the concentration
+
+gradient at its maximum.
+
+© The two reasons suggested for the rapid release of drugs from the surface |
+
+of clays are-
+1. The weak physical bonding between the adsorbate & the adsorbent
+
+2. The hydration & swelling of clay in the aqueous media
+
+
+=== PAGE 45 ===
+14) SOLID SOLUTIONS or MELTS by fusion method
+
+* Asolid solute molecularly dispersed in a solid solvent.
+
+* Since the two components crystallize together in a homogeneous one
+phase system, solid solutions are also called as molecular dispersions
+or mixed crystals.
+
+Because of reduction in particle size to the molecular level, solid solutions
+
+show greater aqueous solubility and faster dissolution than eutectics
+
+and solid dispersion. They are generally prepared by fusion method
+where by a physical mixture of solute and solvent are melted together |
+followed by rapid solidification. |
+Such systems, prepared by fusion, are often called as Melts e.g. griseofulvin
+
+- succinic acid.
+
+15) Eutectic mixtures:
+
+° These systems are also prepared by fusion method.
+
+° Aphase diagram of two-component system is shown in diagram. |
+© When the eutectic mixture is exposed to water, the soluble carrier |
+dissolves leaving the drug in a microcrystalline state which solubilizes
+rapidly.
+Examples of eutectics
+include paracetamol liquid mbauire of A * 9 (mek)
+-urea, griseofulvin -
+urea, griseofulvin-
+
+)
+succinic acid, etc
+
+————> Temperature
+
+——+ Mole % B
+
+
+=== PAGE 46 ===
+16) Solid dispersion:
+
+The term “solid dispersions" refers to the dispersion of one or more |
+active ingredients in an inert carrier in a solid state, frequently
+prepared by the
+
+1. Hot melt method.
+
+2. Solvent evaporation method.
+
+3. Hot melt extrusion method.
+
+17) Molecular encapsulation with cyclodextrins :
+
+The beta and gamma- cyclodextrins and several of their derivatives are
+unique in having the ability to form molecular inclusion complexes with
+hydrophobic drugs having poor aqueous solubility.
+These bucket shaped oligosaccharides produced from starch are versatile
+in having a hydrophobic cavity of size suitable enough to accommodate the
+lipophillic drugs as guests, the outside of the host molecule is
+relatively hydrophillic.
+Thus, the molecularly encapsulated drug has greatly improved aqueous
+solubility & dissolution rate.
+There are several examples of drugs - thiazide diuretics, barbiturates,
+benzodiazepines & number of NSAIDs.
+
+Hydrophilic exterior
+
+Hydrophobic interior
+
+Cavity for encapsulating
+
+hydrophobic drugs
+Entrapped aspirin molecule
+
+
+=== PAGE 47 ===
+1) Lipid technologies:
+
+With an increase in the number of emerging hydrophobic drugs,
+several lipid based formulations have been designed to improve their
+bioavailability by a combination of various mechanisms briefly
+summarised as follows:
+
+a) physicochemical: enhanced dissolution and solubility.
+
+b) physiological: potential mechanisms include
+
+Enhancement of effective luminal solubility by stimulation of
+secretion of bile salts, endogenous biliary lipids including phospholipids
+and cholesterol which together form mixed micelles and facilitate Gl
+solubilization of drug.
+
+Reduction in gastric emptying rate thereby increasing the time available
+
+for dissolution and absorption.
+
+Increased intestinal membrane permeability.
+Increased intestinal blood flow.
+
+Decreased luminal degradation.
+
+Increased uptake from the intestinal lumen into the lymphatic
+
+system (and a reduction in first-pass hepatic and GI metabolism)
+
+Various lipid dosage forms are:
+
+a) Lipid Solutions and Lipid Suspensions
+
+b) Coarse Emulsions, Multiple Emulsions, Microemulsions (SMEDS)
+
+c) Solid Lipid Nanoparticles :
+
+To overcome the disadvantages associated with the lipid state of oil
+droplets, the liquid lipid is replaced by a solid lipid leading to the
+formation of solid lipid nanoparticles. In contrast to emulsions, the
+
+particles consist ofa solid core made from solid lipids.
+
+
+=== PAGE 48 ===
+They are characterized by a mean diameter between approximately |
+100-1000nm.
+
+There are two basic production techniques for solid lipid nanoparticles-
+
+1. Homogenization of melted lipids at elevated temperature&
+
+. Homogenization of a suspension of solid lipids at or below room |
+
+temperature.
+D) Nano Structured Lipid Carriers (NLC)
+
+* Nanostructured lipid carriers are oil-loaded solid-lipid nanoparticles |
+
+but offer the advantage of greater drug loading.
+
+E) Lipid-drug conjugate (LDC) Nanoparticles:
+
+* Involve covalent bonding or salt formation of a hydrophilic drug with
+
+lipid to enhance membrane permeability.
+
+F) Liposomes:
+
+* Defined as lipid bilayer surrounding an aqueous phase. Liposoluble
+drugs can be embedded in the “fatty regions, while hydrophilic
+
+substances are held in the aqueous internal spaces of these globular
+
+vesicles.
+
+2) Ion pairing:
+
+° The ion pairing approach involves co-administration of a hydrophilic or
+
+polar drug with a suitable lipophilic counter ion, which consequently
+
+improves the partitioning of the resultant ion-pair (relatively more
+
+lipophilic) into the intestinal membrane.
+
+* In fact, the approach seems to increase the oral bioavailability of ionisable
+
+drugs such as atenolol, by approximately 2-fold.
+
+* However, it is important that a counter ion possesses high lipophilicity,
+
+sufficient aqueous solubility, physiological compatibility & metabolic
+
+stability.
+
+
+=== PAGE 49 ===
+3. Penetration enhancers:
+
+Compounds which facilitate the transport of drugs across the are called |
+
+as penetration/permeation enhancers or promotors. |
+This method is used mainly in cases of hydrophilic drugs which are |
+expected to have difficulty in penetrating the lipid structure of the |
+biomembrane.
+Penetration enhancers act by interaction of its lipid part with the polar
+
+component of membrane phospholipids.
+
+Penetration enhancers can be divided into three categories:
+
+a. Substance that act very quickly, have a strong effect & cause injury
+to the membrane{ which is reversible) E.G. Fatty acids such as oleic &
+linolic & arachidonic acid & their mono glycerides.
+
+Substances that act quickly, cause temporary injury but have
+average activity, e.g. Salicylates, &certain bile salts.
+Substances having average to strong activity but cause sustained
+histological changes, e.g. SLS, EDTA, citric acid
+
+«+ Enhancement of drug stability
+
+1. Enteric coating: Retard the release of drug in stomach Eg.
+
+erythromycin, penicillin V, pancreatin & benzimidizoles such as
+omeprazole.
+
+Complexation: It is used to increase the stability of drug in Gl e.g.
+ester drugs thus enhance their oral bioavailability. B-cyclodextrins are
+potential carriers for achieving such objectives but other complexing |
+agents, such as caffeine,, sodium salicylate, sodium benzoate, &
+
+nicotinamide
+
+
+=== PAGE 50 ===
+© Bio adhesive delivery systems that can reduce the drug degradation between |
+
+3. Use of metabolism inhibitors: Which can selectively inhibit any of
+
+the contributing processes, would result in increased fractional)
+
+absorption & hence a higher bioavailability.
+
+the delivery system & absorbing membrane by providing intimate
+
+contact with GI mucosa.
+
+Controlled release microencapsulated systems that can provide
+
+simultaneous delivery of a drug & its specific enzyme inhibitor at the site’
+
+for required period of time. Immobilization of enzyme inhibitors on
+
+mucoadhesive delivery systems.
+
+strointesti id
+
+Gastro-retentive drug delivery system (GRDDS) are designed on the basis
+
+of delayed gastric emptying & CR principles & are intended to retain &
+
+localize the drug delivery device in the stomach or within the upper
+
+part of small intestine until the entire drug is released.
+
+Excipients that are bio adhesive or that swell on hydration when
+
+incorporated in an oral dosage form, can promote gastro- retention &
+
+absorption by
+
+1) increased contact with epithelial surfaces.
+
+2) prolonging residence time in the stomach.
+
+3) delaying intestinal transit. e.g. Cellulose ethers, gums of natural |
+
+origin & synthetic acrylic acid polymers have been evaluated for |
+
+such purposes

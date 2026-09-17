@@ -168,7 +168,7 @@ export default function PharmacyLogin() {
         </div>
 
         <p style={{ textAlign: 'center', color: 'rgba(255,255,255,0.2)', fontSize: '11px', marginTop: '20px' }}>
-          AMR-Guard SafeDrop Network · Pharmacist Portal
+          AMR-Shield SafeDrop Network · Pharmacist Portal
         </p>
       </div>
     </div>

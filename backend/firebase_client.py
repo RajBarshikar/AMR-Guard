@@ -1,5 +1,5 @@
 """
-firebase_client.py — Firebase Firestore wrapper for AMR-Guard rewards system.
+firebase_client.py — Firebase Firestore wrapper for AMR-Shield rewards system.
 
 If FIREBASE_CREDENTIALS_PATH is not set or the file does not exist, the module
 falls back to a thread-safe in-memory store so the entire app works perfectly
@@ -43,11 +43,11 @@ try:
             firebase_admin.initialize_app(_cred)
         _db = firestore.client()
         _firebase_available = True
-        print("[AMR-Guard] OK Firebase Firestore connected")
+        print("[AMR-Shield] OK Firebase Firestore connected")
     else:
-        print("[AMR-Guard] WARN Firebase credentials not found - using in-memory store")
+        print("[AMR-Shield] WARN Firebase credentials not found - using in-memory store")
 except Exception as e:
-    print(f"[AMR-Guard] WARN Firebase init failed ({e}) - using in-memory store")
+    print(f"[AMR-Shield] WARN Firebase init failed ({e}) - using in-memory store")
 
 
 # ─── In-Memory Fallback ───────────────────────────────────────────────────────
@@ -451,7 +451,7 @@ def save_scan_record(record: dict) -> None:
             _db.collection("scan_records").document(record_id).set(record)
             return
         except Exception as e:
-            print(f"[AMR-Guard] save_scan_record Firestore error: {e}")
+            print(f"[AMR-Shield] save_scan_record Firestore error: {e}")
     with _lock:
         _mem_scans.append(record)
 
@@ -463,6 +463,6 @@ def get_scan_records(limit: int = 100) -> list[dict]:
             docs = _db.collection("scan_records").limit(limit).stream()
             return [d.to_dict() for d in docs]
         except Exception as e:
-            print(f"[AMR-Guard] get_scan_records error: {e}")
+            print(f"[AMR-Shield] get_scan_records error: {e}")
     with _lock:
         return list(reversed(_mem_scans[-limit:]))

@@ -1,0 +1,1144 @@
+=== PAGE 1 ===
+«+ Introduction
+Pharmacokinetic models
+Compartment Models
+Physiological Models
+
+Noncompartmental Analysis
+
+One-compartment open model
+
+Intravenous Bolus Administration
+Intravenous Infusion
+Extravascular Administration
+
+* Pharmacokinetic parameters
+
+
+=== PAGE 2 ===
+| INTRODUCTION
+
+© The duration of drug therapy ranges from a single dose of a drug taken
+for relieving an acute condition such as headache to drugs taken life-
+long for chronic conditions such as hypertension, diabetes, asthma or
+epilepsy.
+
+© The frequency of administration of a drug in a particular dose is called as
+dosage regimen.
+
+© Depending upon the therapeutic objective to be attained, the duration of
+drug therapy and the dosage regimen are decided.
+
+© Rational and optimal therapy with a drug depends upon -
+
+a. Choice ofa suitable drug, and
+
+b. A balance between the therapeutic and the toxic effects.
+
+Pharmacokinetics is defined as the kinetics of drug absorption,
+
+distribution, metabolism and excretion (KADME) and _ their
+
+relationship with the pharmacological, therapeutic or toxicological
+
+response in man and animals. There are two aspects of pharmacokinetic
+studies —
+
+1. Theoretical aspect - which involves development of pharmacokinetic
+models to predict drug disposition after its administration. Statistical
+methods are commonly applied to interpret data and assess various
+parameters.
+
+2. Experimental aspect - which involves development of biological
+sampling techniques, analytical methods for measurement of drug
+(and metabolites) concentration in biological samples and data
+
+collection and evaluation.
+
+
+=== PAGE 3 ===
+Several relevant terms can now be defined -
+
+* Clinical Pharmacokinetics is defined as the application of
+pharmacokinetic principles in the safe and effective management of
+individual patient.
+
+* Population Pharmacokinetics is defined as the study of
+pharmacokinetic differences of drugs in various population groups.
+
+* Toxicokinetics is defined as the application of pharmacokinetic principles
+to the design, conduct and interpretation of drug safety evaluation
+
+studies.
+
+The three important pharmacokinetic parameters that describe the plasma
+
+level-time curve and useful in assessing the bioavailability of a drug from its
+
+formulation are —
+
+1. Peak Plasma Concentration (Cmax) The point of maximum
+concentration of drug in plasma is called as the peak and the
+concentration of drug at peak is known as peak plasma
+concentration. It is also called as peak height concentration and
+maximum drug concentration. Cmax is expressed in mcg/ml.
+
+© The peak plasma level depends upon —
+¥ The administered dose
+Y Rate of absorption, and
+Y_ Rate of elimination.
+
+© The peak represents the point of time when absorption rate equals
+elimination rate of drug.
+
+© The portion of curve to the left of peak represents absorption phase
+
+i.e. when the rate of absorption is greater than the rate of elimination.
+
+
+=== PAGE 4 ===
+© The section of curve to the right of peak generally represents
+| elimination phase i.e. when the rate of elimination exceeds rate of
+absorption.
+
+© Peak concentration is often related to the intensity of pharmacological
+response and should ideally be above minimum effective
+concentration (MEC) but less than the maximum safe concentration
+(MSC).
+
+2. Time of Peak Concentration (tmax) The time for drug to reach
+peak concentration in plasma is called as the time of peak
+concentration. It is expressed in hours and is useful in estimating the
+rate of absorption.
+
+3. Area Under the Curve (AUC) It represents the total integrated area
+under the plasma level-time profile and expresses the total amount of
+drug that comes into the systemic circulation after its administration.
+AUC is expressed in mcg/ml X hours. It is the most important parameter
+in evaluating the bioavailability of a drug from its dosage form as it
+represents the extent of absorption.
+
+~ a ic Para
+
+The various pharmacodynamic parameters are —
+
+1. Minimum Effective Concentration (MEC) It is defined as the
+minimum concentration of drug in plasma required to produce the
+therapeutic effect. It reflects the minimum concentration of drug at the
+receptor site to elicit the desired pharmacological response.
+
+2. Maximum Safe Concentration (MSC) Also called as minimum
+toxic concentration (MTC), it is the concentration of drug in plasma
+
+above which adverse or unwanted effects are precipitated.
+
+
+=== PAGE 5 ===
+ee
+
+3. Onset of Action The beginning of pharmacological response is called
+
+s
+
+7
+
+8
+
+>
+
+o,
+O
+
+as onset of action. It occurs when the plasma drug concentration just
+exceeds the required MEC.
+
+Onset Time It is the time required for the drug to start producing
+pharmacological response. It corresponds to the time for the plasma
+concentration to reach MEC after administration of drug.
+
+Duration of Action The time period for which the plasma
+concentration of drug remains above the MEC level is called as
+duration of drug action. It is also defined as the difference between onset
+time and time for the drug to decline back to MEC.
+
+Intensity of Action It is the maximum pharmacological response
+produced by the peak plasma concentration of drug. It is also called as
+peak response.
+
+Therapeutic Range The drug concentration between MEC and MSC
+represents the therapeutic range. It is also known as therapeutic window.
+Therapeutic Index The ratio of MSC to MEC is called as therapeutic
+index. It is also defined as the ratio of dose required to produce toxic or
+lethal effects to dose required to produce therapeutic effect.
+
+Rate, Rate Constants and Orders of Reactions
+Pharmacokinetics is the mathematical analysis of processes of ADME.
+The movement of drug molecules from the site of application to the
+systemic circulation, through various barriers,
+
+Their conversion into another chemical form and finally their exit out
+of the body can be expressed mathematically by the rate at which they
+
+proceed, the order of such processes and the rate constants.
+
+
+=== PAGE 6 ===
+© The velocity with which a reaction or a process occurs is called as its
+rate.
+
+* The manner in which the concentration of drug (or reactants) |
+influences the rate of reaction or process is called as the order of |
+reaction or order of process. |
+
+® Consider the following chemical reaction:
+
+Drug A———> Drug B
+
+The rate of forward reaction is expressed as = a
+
+° Negative sign indicates that the concentration of drug A decreases
+with time t. As the reaction proceeds, the concentration of drug B
+increases and the rate of reaction can also be expressed as:
+
+aB
+dt
+
+© Experimentally, the rate of reaction is determined by measuring the
+decrease in concentration of drug A with time t.
+
+© IfC is the concentration of drug A, the rate of decrease in C of drug A as
+
+it is changed to B can be described by a general expression as a function of
+
+timet. dc = Kc" where, K = rate constant
+dt n = order of reaction
+
+* Ifn=0, its a zero-order process, if n = 1, it is a first-order process and
+so on. The three commonly encountered rate processes in a physiological
+
+system are —
+
+¥Y  Zero-order process
+Y First-order process
+v  Mixed-order process.
+
+© The pharmacokinetics of most drugs can be adequately described by
+
+zero- and first order processes.
+
+
+=== PAGE 7 ===
+> Zero-Order Kinetics (Constant Rate Processes)
+
+Ifn=0,
+
+8 - _K0C%-K where Kg = zero-order rate constant (in mg/min)
+
+® The zero-order process can be defined as the one whose rate is
+independent of the concentration of drug undergoing reaction i.e. The
+rate of reaction cannot be increased further by increasing the
+concentration of reactants.
+Rearrangement of equation yields: dC = -Ky dt
+Integration of equation gives: C - Cy = -Kot
+where ,Co = concentration of drug at t = 0, and
+
+C = concentration of drug yet to undergo reaction at time t.
+
+© A plot of C versus t yields such a straight line having slope - Ky and y-
+
+intercept Cy
+
+steady drug loss
+
+slope = - Ky
+
+© Examples of zero-order processes are -
+1. Metabolism/protein-drug binding/enzyme or carrier-mediated transport
+
+under saturated conditions. The rate of metabolism, binding or transport of
+
+
+=== PAGE 8 ===
+drug remains constant as long as its concentration is in excess of saturating
+concentration. |
+2. Administration of a drug as a constant rate i.v. infusion.
+
+3. Controlled drug delivery such as that from i.m. implants or osmotic pumps.
+
+> First-Order Kinetics (Linear Kinetics)
+
+Ifn=1, ac =—Kc Where, K = first-order rate constant (in time-1 or
+
+per hour)
+
+° A first-order process is the one whose rate is directly proportional to the
+
+concentration of drug undergoing reaction i.e. Greater the concentration,
+
+faster the reaction.
+® It is because of such proportionality between rate of reaction and the
+
+concentration of drug that a first-order process is said to follow linear
+
+kinetics.
+
+—ent C
+
+* Most pharmacokinetic processes viz. absorption, distribution and
+
+elimination follow first-order kinetics
+
+First-Order Half-Life
+
+Substituting the value of C = Co/2 at t% in equation and solving it yields:
+
+
+=== PAGE 9 ===
+The half-life of a first-order process is a constant and independent of
+
+initial drug concentration i.e. irrespective of what the initial drug
+concentration is, the time required for the concentration to decrease by
+one-half remains the same. The t% of a first-order process is an
+
+important pharmacokinetic parameter.
+
+Mixed-Order Kinetics (Nonlinear Kinetics)
+
+In some instances, the kinetics of a pharmacokinetic process changes
+from predominantly first-order to predominantly zero-order with
+increasing dose or chronic medication.
+
+A mixture of both first-order and zero-order kinetics is observed in
+such cases and therefore the process is said to follow mixed-order
+kinetics.
+
+The rate process of such a drug is called as nonlinear kinetics.
+
+Mixed order kinetics is also termed as dose-dependent kinetics as it is
+observed at increased or multiple doses of some drugs.
+
+Nonlinearities in pharmacokinetics have been observed in -
+
+Y Drug absorption (e.g. vitamin C)
+
+Y Drug distribution (e.g. naproxen), and
+
+¥ Drug elimination (e.g. riboflavin).
+
+PHARMACOKINETIC MODELS
+
+Drug movement within the body is a complex process.
+
+The major objective is therefore to develop a generalized and simple
+approach to describe, analyse and interpret the data obtained during
+in vivo drug disposition studies.
+
+The two major approaches in the quantitative study of various kinetic
+
+processes of drug disposition in the body are -
+
+
+=== PAGE 10 ===
+¥ Model approach, and
+
+Y Model-independent approach (non-compartmental analysis).
+
+Pharmacokinetic Model Approach
+
+In this approach, models are used to describe changes in drug
+concentration in the body with time.
+A model is a hypothesis that employs mathematical terms to concisely
+describe quantitative relationships.
+Pharmacokinetic models provide concise means of expressing
+mathematically or quantitatively, the time course of drug throughout the
+
+body and compute meaningful pharmacokinetic parameters.
+
+Types of Pharmacokinetic Models Pharmacokinetic models are of three
+
+different types -
+
+1.
+S
+3.
+
+Compartment models - are also called as empirical models, and
+
+Physiological models - are realistic models.
+
+Distributed parameter models - are also realistic models.
+
+
+=== PAGE 11 ===
+Advantages |
+
+Disadvantages
+
+Compartmental analysis is the traditional and most commonly used
+approach to pharmacokinetic characterization of a drug. These models
+simply interpolate the experimental data and allow an empirical |
+formula to estimate the drug concentration with time. |
+A compartment is not a real physiological or anatomic region but an |
+imaginary or hypothetical one consisting of tissue/ group of tissues |
+with similar blood flow & affinity.
+Our body is considered as composed of several compartments connected
+
+reversibly with each other.
+
+Gives visual representation of various rate processes involved in drug |
+disposition.
+
+Possible to derive equations describing drug concentration changes in
+each compartment.
+
+One can estimate the amount of drug in any compartment of the system
+
+after drug is introduced into a given compartment. |
+
+Drug given by IV route may behave according to single compartment
+model but the same drug given by oral route may show 2 compartment
+behaviour.
+
+The type of compartment behaviour i.e. Type of compartment model may
+change with the route of administration. |
+Depending upon whether the compartments are arranged parallel or in |
+a series, compartment models are divided into two categories —
+
+v¥ Mammillary model
+
+v Catenary model
+
+
+=== PAGE 12 ===
+> Mammillary Model
+
+© This model is the most common compartment model used _ in
+
+pharmacokinetics.
+
+* It consists of one or more peripheral compartments connected to the
+central compartment (ie. they are joined parallel to the central
+compartment).
+
+© The central compartment (or compartment 1) comprises of plasma |
+and highly perfused tissues such as lungs, liver, kidneys, etc. which rapidly
+equilibrate with the drug.
+
+© The drug is directly absorbed into this compartment (i.e. blood).
+
+© Elimination too occurs from this compartment since the chief organs
+involved in drug elimination are liver and kidneys.
+
+© The peripheral compartments or tissue compartments (denoted by
+numbers 2, 3, etc.) are those with low vascularity and poor perfusion.
+
+© Distribution of drugs to these compartments is through blood. Movement of
+drug between compartments is defined by characteristic first-order rate
+constants denoted by letter K .
+
+© The subscript indicates the direction of drug movement; thus, K,, (K-one-
+two) refers to drug movement from compartment 1 to compartment 2
+and reverse for K>;.
+
+¥Y Various mammillary compartment models. The rate constant Kp; is |
+basically Ka, the first-order absorption rate constant and Ky is KE, the first-
+
+order elimination rate constant.
+
+Model 1
+
+
+=== PAGE 13 ===
+Model 2 Ko: Kio
+
+One compartment open model, extravascular (oral , rectal etc.) administration | |
+|
+
+Model 3 Ky.
+Le = 2 |
+K
+| Kio 21
+
+Two compartment open model, intravenous administration
+
+Model 4 Ko:
+
+Two compartment open model, extravascular administration
+
+“ee
+Ky, Ka,
+Ky3
+1
+
+Three compartment open model, intravenous administration
+
+Model 6
+
+Three compartment open model, extravascular administration
+
+
+=== PAGE 14 ===
+> Catenary Model
+© In this model, the compartments are joined to one another in a series
+like compartments of a train. This is however not observable
+
+physiologically/anatomically as the various organs are directly linked to
+
+the blood compartment. Hence this model is rarely used.
+
+° These models are also known as_physiologically-based
+pharmacokinetic models (PB-PK models).
+
+° They are drawn on the basis of known anatomic and physiological data
+and thus present a more realistic picture of drug disposition in
+various organs and tissues.
+
+° The number of compartments to be included in the model depends upon
+the disposition characteristics of the drug.
+
+® Since describing each organ/tissue with mathematic equations makes
+the model complex, tissues with similar perfusion properties are
+grouped into a single compartment.
+
+° For example, lungs, liver, brain and kidney are grouped as rapidly
+equilibrating tissues (RET) while muscles and adipose as slowly
+equilibrating tissues (SET).
+
+° Aphysiological model where the compartments are arranged in a series in
+
+a flow diagram
+
+
+=== PAGE 15 ===
+Schematic representation of a physiological pharmacokinetic
+
+model. The term Q indicates blood flow rate to a body region. HPT
+stands for other highly perfused tissues and PPT for poorly
+perfused tissues. Km is rate constant for hepatic elimination and
+
+Ke is first-order rate constant for urinary excretion.
+
+® Since the rate of drug carried to a tissue organ and tissue drug uptake are
+dependent upon two major factors -
+¥ Rate of blood flow to the organ, and
+¥ Tissue/blood partition coefficient or diffusion coefficient of drug that
+governs its tissue permeability
+The physiological models are further categorized into two types -
+1. Blood flow rate-limited models -based on the assumption that the
+drug movement within a body region is much more rapid than its rate
+of delivery to that region by the perfusing blood. These models are
+
+therefore also called as perfusion rate-limited models.
+
+
+=== PAGE 16 ===
+. Membrane permeation rate-limited models - These models are more
+
+complex and applicable to highly polar, ionised and charged drugs, in
+which case the cell membrane acts as a barrier for the drug that
+
+|
+gradually permeates by diffusion. These models are therefore also |
+
+called as diffusion-limited models.
+
+Distributed Parameter Model
+This model is analogous to physiological model but has been designed to |
+take into account - |
+v_ Variations in blood flow to an organ, and
+
+¥ Variations in drug diffusion in an organ.
+
+Such a model is thus specifically useful for assessing regional differences
+in drug concentrations in tumours or necrotic tissues.
+
+The distributed parameter model differs from physiological models in that
+the mathematical equations are more complex and collection of drug
+
+concentration data is more difficult.
+
+Model independent approach
+
+Noncompartmental Analysis
+
+The noncompartmental analysis, also called as the model-independent
+method, does not require the assumption of specific compartment
+model.
+
+This method is, however, based on the assumption that the drugs or
+metabolites follow linear kinetics, and on this basis, this technique can
+be applied to any compartment model.
+
+The noncompartmental approach, based on the statistical moments
+theory, involves collection of experimental data following a single
+
+dose of drug.
+
+
+=== PAGE 17 ===
+© If one considers the time course of drug concentration in plasma as a
+
+i| statistical distribution curve, then:
+
+Where, MRT = mean residence time
+AUMC = area under the first-moment curve
+
+AUC = area under the zero-moment curve
+
+© Practically, the AUMC and AUC can be calculated from the respective
+graphs by the trapezoidal rule (the method involves dividing the curve by
+a series of vertical lines into a number of trapezoids, calculating separately
+
+the area of each trapezoid and adding them together).
+
+—— Concentration X Time
+
+—— Concentration
+
+® MRT is defined as the average amount of time spent by the drug in the
+body before being eliminated. In this sense, it is the statistical moment
+analogy of half-life, t4. In effect, MRT represents the time for 63.2% of the
+intravenous bolus dose to be eliminated. The values will always be greater
+
+when the drug is administered in a fashion other than i.v. bolus.
+
+
+=== PAGE 18 ===
+CQ) ONE-COMPARTMENT OPEN MODEL
+(Instantaneous Distribution Model)
+
+The one-compartment open model is the simplest model. Owing to its
+simplicity, it is based on following assumptions -
+
+1. The body is considered as a single, kinetically homogeneous unit that
+has no barriers to the movement of drug.
+
+2. Final distribution equilibrium between the drug in plasma and
+other body fluids (i.e. mixing) is attained instantaneously and
+maintained at all times. This model thus applies only to those drugs
+that distribute rapidly throughout the body.
+
+3. Drugs move dynamically, in (absorption) and out (elimination) of
+this compartment.
+
+4. Elimination is a first-order (monoexponential) process with first-
+order rate constant.
+
+5. Rate of input (absorption) > rate of output (elimination).
+
+6. The anatomical reference compartment is plasma and concentration of
+drug in plasma is representative of drug concentration in all body
+tissues i.e. any change in plasma drug concentration reflects a
+proportional change in drug concentration throughout the body.
+
+* However, the model does not assume that the drug concentration in plasma
+is equal to that in other body tissues.
+
+® The term open indicates that the input (availability) and output
+(elimination) are unidirectional and that the drug can be eliminated
+from the body.
+
+® One-compartment open model is generally used to describe plasma levels
+
+following administration ofa single dose of a drug.
+
+
+=== PAGE 19 ===
+Output
+(Elimination)
+
+Input
+(absorption)
+
+Depending upon the rate of input, several one-compartment open models can
+
+be defined:
+
+One-compartment open model, i.v. bolus administration.
+
+One-compartment open model, continuous i-v. infusion.
+
+One-compartment open model, e.v. administration, zero-order absorption.
+
+1
+
+2
+
+3.
+
+4. One-compartment open model, e.v. administration, first-order absorption
+>
+
+Intravenous Bolus Administration
+
+© When a drug that distributes rapidly in the body is given in the form of a
+rapid intravenous\ injection (i.e. iv. bolus or slug), it takes about one to
+three minutes for complete circulation and therefore the rate of
+
+absorption is neglected in calculations. The model can be depicted as
+
+follows:
+
+The general expression for rate of drug presentation to the body is:
+
+dX _
+dt ~
+
+Since rate in or absorption is absent, the equation becomes:
+
+Rate in (availability)-Rate out (elimination)
+
+dx tamed
+“dt = “Rate out (elimination)
+
+If the rate out or elimination follows first-order kinetics, then:
+
+
+=== PAGE 20 ===
+where,
+KE = first-order elimination rate constant, and
+X = amount of drug in the body at any time t remaining to be eliminated.
+
+Negative sign indicates that the drug is being lost from the body.
+
+v Estimation of Pharmacokinetic Parameters
+
+For a drug that follows one-compartment kinetics and administered as rapid
+iv. injection, the decline in plasma drug concentration is only due to
+elimination of drug from the body (and not due to distribution), the phase
+being called as elimination phase.
+
+Elimination phase can be characterized by 3 parameters—
+
+1. Elimination rate constant
+
+2. Elimination half-life
+
+3. Clearance.
+
+o Elimination rate constant
+
+log Cy
+
+(a) Regular (Cartesian) Plot (b) Semilogarithmic Plot
+
+—— Concentration
+— log Concentration
+
+
+=== PAGE 21 ===
+. Elimination Half-Life:
+
+® Also called as biological half-life. It is defined as the time taken for the
+amount of drug in the body as well as plasma concentration to decline
+
+by one-half or 50% its initial value. It is expressed in hours or minutes.
+
+Half-life is related to elimination rate constant by the following equation:
+
+0.693
+ti2= K,
+
+v Apparent Volume of Distribution: The two separate and
+
+independent pharmacokinetic characteristics of a drug are -
+
+1. Apparent volume of distribution, and
+
+2. Clearance.
+
+Since these parameters are closely related with the physiologic mechanisms in
+
+the body, they are called as primary parameters.
+
+o Clearance:
+
+* Difficulties arise when one applies elimination rate constant and half-
+
+life as pharmacokinetic parameters in an anatomical/physiological
+
+context and as a measure of drug elimination mechanisms.
+
+A much more valuable alternative approach for such applications is use of
+
+clearance parameters to characterize drug disposition.
+
+Clearance is the most important parameter in clinical drug applications and
+
+is useful in evaluating the mechanism by which a drug is eliminated by
+
+the whole organism or by a particular organ.
+
+
+=== PAGE 22 ===
+® Clearance is defined as the theoretical volume of body fluid containing |
+drug (i.e. that fraction of apparent volume of distribution) from which the
+drug is completely removed in a given period of time. It is expressed in
+
+ml/min or liters/hour.
+
+Y Total Body Clearance: Elimination of a drug from the body involves
+
+processes occurring in kidney, liver, lungs and other eliminating organs.
+Clearance at an individual organ level is called as organ clearance. It can
+be estimated by dividing the rate of elimination by each organ with the
+
+concentration of drug presented to it. Thus,
+
+_ Rate of elimination by kidney
+
+Renal Clearance Clk C
+
+Hepatic Clearance Cly= Rate of er ee by Liver
+
+Other Organ Clearance Cl oi, Rate of elimination by other organs
+The total body clearance, Cl, also called as total systemic clearance, is an
+
+additive property of individual organ clearances. Hence,
+
+> Intravenous Infusion
+° Rapid iv. injection is unsuitable when the drug has potential to precipitate
+toxicity or when maintenance of a stable concentration or amount of drug
+in the body is desired.
+
+In such a situation, the drug is administered at a constant rate (zero-
+order) byi.v. infusion.
+
+In contrast to the short duration of infusion of an i.v. bolus (few seconds),
+
+the duration of constant rate infusion is usually much longer than the
+half-life of the drug.
+
+
+=== PAGE 23 ===
+Advantages of zero-order infusion of drugs include—
+
+1. Ease of control of rate of infusion to fit individual patient needs.
+
+2. Prevents fluctuating maxima and minima (peak and valley) plasma
+level, desired especially when the drug has a narrow therapeutic index.
+
+3. Other drugs, electrolytes and nutrients can be conveniently
+administered simultaneously by the same infusion line in critically ill
+
+patients, The model can be represented as follows:
+
+infusion
+rate
+
+<+— Infusion rate = 2R,
+
+TY ee ee eee <— Infusion stopped
+
+when plotted on a
+semilog graph, yields
+a straight line with
+slope = - K,/2.303
+
+Infusion rate = Ro
+
+—> Plasma Drug Concentration
+
+Infusion time = T
+
+Y Infusion Plus Loading Dose:
+° Ittakes a very long time for the drugs having longer half lives before the
+
+plateau concentration is reached (e.g. phenobarbital, 5 days). Thus,
+
+initially, such drugs have subtherapeutic concentrations.
+
+
+=== PAGE 24 ===
+to yield the desired steady-state immediately upon injection prior to
+
+starting the infusion.
+
+It should then be followed immediately by i.v. infusion at a rate enough to
+
+maintain this concentration.
+
+resultant constant
+7 loading dose / plasma level
+
+we asymptotic rise
+of infused drug
+
+/ S, exponential fall
+/ . g— of loading dose
+Start of _
+
+—
+
+Extravascular Administration
+
+When a drug is administered by extravascular route (e.g. oral, i.m., rectal,
+etc.), absorption is a prerequisite for its therapeutic activity.
+
+The rate of absorption may be described mathematically as a zero-order or
+first-order process.
+
+A large number of plasma concentration-time profiles can be described by a
+one-compartment model with first-order absorption and elimination.
+However, under certain conditions, the absorption of some drugs may be
+better described by assuming zero-order (constant rate) kinetics.
+Distinction between zero-order and first-order absorption processes.
+Figure a is regular plot, and Figure b a semilog plot of amount of drug
+
+remaining to be absorbed (ARA) versus time t.
+
+
+=== PAGE 25 ===
+(a) Regular (Cartesian) Plot (b) Semilogarithmic Plot
+
+Zero-order absorption is characterized by a constant rate of absorption.
+
+It is independent of amount remaining to be absorbed (ARA), and its
+regular ARA versus t plot is linear with slope equal to rate of
+absorption while the semilog plot is described by an ever-increasing
+
+gradient with time.
+
+In contrast, the first-order absorption process is distinguished by a decline
+
+in the rate with ARA i.e. absorption rate is dependent upon ARA;
+Its regular plot is curvilinear and semilog plot a straight line with
+
+absorption rate constantas its slope.
+
+Crsx Absorption rate = Elimination rate
+
+
+=== PAGE 26 ===
+i. Zero-Order Absorption Model
+
+This model is similar to that for constant rate infusion.
+
+R
+
+Zero order
+absorption
+
+© The rate of drug absorption, as in the case of several controlled drug
+delivery systems, is constant and continues until the amount of drug at the
+absorption site (e.g. GIT) is depleted.
+
+® All equations that explain the plasma concentration-time profile for
+constant rate i.v. infusion are also applicable to this model.
+
+ii. First-Order Absorption Model
+For a drug that enters the body by a first-order absorption process, gets
+distributed in the body according to one-compartment kinetics and is
+eliminated by a first-order process, the model can be depicted as follows:
+
+Blood and
+
+0D ther bod y
+tissue
+
+Zero order
+absorption
+
+QO PHARMACOKINETIC PARAMETERS
+¢> Elimination rate constant
+
+® The elimination rate constant describes the fraction of drug
+eliminated per unit of time or the rate at which plasma concentrations
+will decline during the elimination phase.
+Elimination rate constant Consider a single IV bolus injection of drug X. As
+time proceeds, the amount of drug in the body is eliminated. Thus the rate
+
+of elimination can be described (assuming first-order elimination) as:
+
+
+=== PAGE 27 ===
+o,
+©
+
+aX | KX where
+X = amount of drug X,
+Xo = dose and
+
+Hence X =X, exp(-kt) _k = first-order elimination rate constant |
+
+The time required to reduce the plasma concentration to one half its
+
+initial value is defined as the half-life (t,,2).
+0.693
+aan a
+
+This parameter is very useful for estimating how long it will take for
+levels to be reduced by half the original concentration.
+
+It can be used to estimate for how long a drug should be stopped if a patient
+has toxic drug levels, assuming the drug shows linear one-compartment
+
+pharmacokinetics.
+
+Vol f distributi
+
+The volume of distribution (V,) has no direct physiological meaning; it is
+not a ‘real’ volume and is usually referred to as the apparent volume of
+distribution.
+It is defined as that volume of plasma in which the total amount of drug
+in the body would be required to be dissolved in order to reflect the
+drug concentration attained in plasma.
+The body is not a homogeneous unit, even though a one-compartment
+model can be used to describe the plasma concentration-time profile of a
+number of drugs.
+It is important to realise that the concentration of the drug (Cp) in plasma
+
+is not necessarily the same in the liver, kidneys or other tissues.
+
+Thus C, in plasma does not equal C, or amount of drug (X) in the |
+
+kidney or C, or amount of drug (X) in the liver or C, or amount of drug
+
+(X) in tissues. However, changes in the drug concentration in plasma (Cp)
+
+are proportional to changes in the amount of drug (X) in the tissues. Since
+
+
+=== PAGE 28 ===
+C, (plasma) a C, (tissues) i.e.C, (plasma)a X (tissues)
+
+° where V, is the constant of proportionality and is referred to as the
+volume of distribution, which thus relates the total amount of drug in the
+
+body at any time to the corresponding plasma concentration. Thus
+
+© Drug clearance (CL) is defined as the volume of plasma in the vascular
+compartment cleared of drug per unit time by the processes of
+metabolism and excretion.
+
+Clearance for a drug is constant if the drug is eliminated by first-order
+kinetics. Drug can be cleared by renal excretion or by metabolism or both.
+
+With respect to the kidney and liver, etc., clearances are additive, that is:
+
+® Mathematically, clearance is the product of the first-order elimination
+
+rate constant (k) and the apparent volume of distribution (Vd). Thus
+
+® Hence the clearance is the elimination rate constant - i.e. the fractional rate
+of drug loss - from the volume of distribution.
+
+* Clearance is related to half-life by
+
+
+=== PAGE 29 ===
+Fractional rate of drug absorption from the site of administration into
+the systemic circulation.
+
+The absorption rate constant K, is a value used in pharmacokinetics to
+describe the rate at which a drug enters into the system. It is expressed
+in units of time“. The K, is related to the absorption half-life (t,,2,) per the
+following equation: K, = In(2) / ty,2,.
+
+Clinical importance - determines time required for administration drug to
+
+reach an effective plasma concentration.
+
+Influences both Cmax & tmax
+Significance of Absorption-Rate Constant
+
+For many immediate-release dosage forms, the absorption process is
+first-order due to the physical nature of drug diffusion.
+
+The calculation of K, is useful in designing a multiple- dosage regimen.
+Knowledge of K, and k allows for the prediction of peak and trough
+plasma drug concentrations following multiple dosing.
+
+In bio-equivalent studies, time of peak concentrations can be very
+useful in comparing respective rates of absorption of a drug from
+
+chemically equivalent drug products.
+
+Area under curve
+Area under curve It reflects the total amount of active drug which reaches
+the systemic circulation.
+It is independent of route of administration and elimination process as long
+as it does not changes.
+
+AUC a dose
+
+Area Under Plasma Concentration-Time Curve:
+
+
+=== PAGE 30 ===
+AUC segment
+
+4
+Time (hour)
+
+Importance of AUC
+Toxicology: Measure of drug exposure
+
+Biopharmaceutics: Comparison of drug products.
+
+\ NON Uv
+
+Pharmacokinetics: Measure of Pharmacokinetic parameters
+Clearance, BA.
+
+> Calculation of AUC
+
+1. Planimeter
+
+2. Cut & Weigh method
+
+3. Mathematical :- Trapezoidal rule
+
+4. Counting Squares method
+
+A. Cut And Weigh Method
+
+Y Plot the plasma profile vs time on graph paper
+
+Cut the curve drawn carefully
+
+Require an analytical balance
+
+The weight of this cut portion is W1 so we presume
+AUC1 @W1
+
+Weight of whole graph paper is W2
+
+Area of whole paper = AUC2
+
+NS NNN NNN
+
+Area length x breath
+
+eg.
+
+
+=== PAGE 31 ===
+. Counting Squared Method
+The plasma concentration Vs time graph is plotted on graph paper
+
+Total number of squares are counted
+
+Area of each square is measured in cm or the units on x and y axis of graph
+
+Total full squares counted and total number of small squares in shaded area
+
+counted to get total number of full squares.
+
+. Planimeter a
+AKA platometer, -
+
+measuring instrument - to determine the
+
+area of an arbitrary two-dimensional shape
+
+D. Trapezoidal Rule
+
+Steps
+
+Y Dividing whole AUC into trapezoidal segments
+¥ Counting the area of each segments separately
+¥ Summation ofall the area
+
+Y Calculate Total area
+

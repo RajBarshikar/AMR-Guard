@@ -1,5 +1,5 @@
 """
-rewards.py — Rewards & Points system endpoints for AMR-Guard.
+rewards.py — Rewards & Points system endpoints for AMR-Shield.
 """
 
 from __future__ import annotations

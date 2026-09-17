@@ -22,7 +22,7 @@ async def report_centre(report: CentreReport):
         "note": report.note,
         "device_id": report.device_id,
     })
-    return {"success": True, "message": "Report received. Thank you for improving AMR-Guard!"}
+    return {"success": True, "message": "Report received. Thank you for improving AMR-Shield!"}
 
 @router.get("/community/stats")
 async def community_stats():

@@ -26,7 +26,7 @@ export async function analyzeMedication(imageBlob, district) {
     await saveScanResult(result);
     return { result, offline: false };
   } catch (err) {
-    console.warn('[AMR-Guard] API failed, queuing offline:', err.message);
+    console.warn('[AMR-Shield] API failed, queuing offline:', err.message);
     await saveToOfflineQueue(imageBlob);
     return { result: null, offline: true };
   }

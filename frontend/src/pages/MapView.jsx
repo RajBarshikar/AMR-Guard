@@ -64,7 +64,7 @@ const VERIFIED_PARTNERS = [
   },
   {
     id: 'vp3',
-    name: 'AMR-Guard Biomedical Waste Hub',
+    name: 'AMR-Shield Biomedical Waste Hub',
     address: 'Civil Lines, District Hospital Complex',
     phone: '+91-22-2501-8800',
     type: 'biomedical',

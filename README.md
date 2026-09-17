@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/TailwindCSS-4.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind" />
 </p>
 
-<h1 align="center">🛡️ AMR-Guard</h1>
+<h1 align="center">🛡️ AMR-Shield</h1>
 <h3 align="center"><em>Secure Disposal. Stronger Medicine.</em></h3>
 
 <p align="center">
@@ -32,7 +32,7 @@
 
 India is the world's largest consumer of antibiotics. Yet there is **no scalable system** for safe disposal of unused or expired medications. When antibiotics are flushed down toilets or thrown in dustbins, they enter rivers, soil, and groundwater — breeding **superbugs** that resist all known medicines.
 
-**AMR-Guard bridges this gap** by putting the power of safe disposal directly in the hands of 1.4 billion citizens.
+**AMR-Shield bridges this gap** by putting the power of safe disposal directly in the hands of 1.4 billion citizens.
 
 ---
 

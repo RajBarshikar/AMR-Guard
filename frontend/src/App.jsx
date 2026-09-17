@@ -40,7 +40,7 @@ export default function App() {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then((registration) => {
         registration.addEventListener('updatefound', () => {
-          console.log('[AMR-Guard] New service worker update found');
+          console.log('[AMR-Shield] New service worker update found');
         });
       });
     }
