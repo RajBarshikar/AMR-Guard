@@ -1,6 +1,10 @@
 import { saveToOfflineQueue, saveScanResult } from './offlineQueue';
 
-const API_BASE = 'https://amr-guard-api.onrender.com/api/v1';
+// When running Vite dev server (including forwarded port 5173), always route
+// through the Vite proxy to the local backend on port 8000.
+const API_BASE = import.meta.env.VITE_API_BASE || (
+  import.meta.env.DEV ? '/api/v1' : 'https://amr-guard-api.onrender.com/api/v1'
+);
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 async function apiFetch(path, opts = {}) {

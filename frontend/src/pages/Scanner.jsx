@@ -105,6 +105,7 @@ export default function Scanner() {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const streamRef = useRef(null);
+  const fileInputRef = useRef(null);
 
   const [phase, setPhase] = useState('camera');
   const [facingMode, setFacingMode] = useState('environment');
@@ -142,13 +143,24 @@ export default function Scanner() {
     const { result: res, offline } = await analyzeMedication(blob, district);
     if (offline) setPhase('offline');
     else {
-      navigate('/takeback', {
-        state: {
-          drugName: res?.drug_name || '',
-          expiryDate: res?.expiry_date || '',
-          isAntibiotic: res?.is_antibiotic || false,
-        },
-      });
+      setResult(res);
+      setPhase('result');
+    }
+  };
+
+  const handleFileUpload = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => setCapturedImage(ev.target.result);
+    reader.readAsDataURL(file);
+    setPhase('analyzing');
+    if (streamRef.current) streamRef.current.getTracks().forEach((t) => t.stop());
+    const { result: res, offline } = await analyzeMedication(file, district);
+    if (offline) setPhase('offline');
+    else {
+      setResult(res);
+      setPhase('result');
     }
   };
 
@@ -159,6 +171,7 @@ export default function Scanner() {
     return (
       <div className="fixed inset-0 z-40 bg-black flex flex-col">
         <canvas ref={canvasRef} className="hidden" />
+        <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={handleFileUpload} />
         <video ref={videoRef} autoPlay playsInline muted className="w-full h-full object-cover" />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 60% 45%, transparent 50%, rgba(0,0,0,0.6) 100%)' }} />
@@ -186,16 +199,23 @@ export default function Scanner() {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 safe-bottom pb-8">
-          <div className="flex items-center justify-center gap-8 px-6">
-            <button onClick={() => navigate('/')} className="w-12 h-12 rounded-full glass flex items-center justify-center text-white">
+          <div className="flex items-center justify-center gap-6 px-6">
+            <button onClick={() => navigate('/')} className="w-12 h-12 rounded-full glass flex items-center justify-center text-white" title="Go back">
               <Icons.ArrowLeft className="w-5 h-5" />
+            </button>
+            <button onClick={() => fileInputRef.current?.click()} className="w-12 h-12 rounded-full glass flex items-center justify-center text-white" title="Upload medication image">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
             </button>
             <button onClick={handleCapture} className="relative w-20 h-20 rounded-full border-4 border-white/90 flex items-center justify-center active:scale-90 transition-transform">
               <div className="w-16 h-16 rounded-full gradient-primary" style={{ boxShadow: 'var(--shadow-accent)' }} />
               <div className="absolute inset-0 rounded-full border-2 border-teal-400/30 animate-pulse-ring" />
             </button>
             <button onClick={() => setFacingMode((p) => p === 'environment' ? 'user' : 'environment')}
-                    className="w-12 h-12 rounded-full glass flex items-center justify-center text-white">
+                    className="w-12 h-12 rounded-full glass flex items-center justify-center text-white" title="Switch camera">
               <Icons.RefreshCw className="w-5 h-5" />
             </button>
           </div>
@@ -208,6 +228,7 @@ export default function Scanner() {
   return (
     <div className="px-4 pt-6 pb-6">
       <canvas ref={canvasRef} className="hidden" />
+      <input ref={fileInputRef} type="file" accept="image/*" className="hidden" onChange={handleFileUpload} />
 
       {phase === 'analyzing' && (
         <LoadingTips district={district} title={t('analyzing')} />
@@ -338,10 +359,17 @@ export default function Scanner() {
           </div>
           <p className="font-semibold text-lg mb-2" style={{ color: '#ef4444' }}>{t('camera_permission')}</p>
           <p className="text-sm text-center mb-6" style={{ color: 'var(--text-tertiary)' }}>Please grant camera access in your browser settings and try again.</p>
-          <button onClick={() => { setPhase('camera'); startCamera(); }}
-                  className="px-8 py-3 rounded-2xl gradient-primary text-white font-semibold text-sm active:scale-95 transition-transform">
-            Try Again
-          </button>
+          <div className="flex flex-col gap-3 w-full max-w-xs">
+            <button onClick={() => { setPhase('camera'); startCamera(); }}
+                    className="w-full py-3 rounded-2xl gradient-primary text-white font-semibold text-sm active:scale-95 transition-transform">
+              Try Camera Again
+            </button>
+            <button onClick={() => fileInputRef.current?.click()}
+                    className="w-full py-3 rounded-2xl card font-semibold text-sm active:scale-95 transition-transform flex items-center justify-center gap-2"
+                    style={{ color: 'var(--text-primary)' }}>
+              <Icons.Camera className="w-4 h-4" /> Upload Image File
+            </button>
+          </div>
         </div>
       )}
     </div>

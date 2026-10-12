@@ -101,6 +101,97 @@ def _get_medicine_data(name: str) -> Optional[dict]:
 
 
 
+def _normalize_expiry_date(expiry_date_str: Optional[str]) -> Optional[str]:
+    if not expiry_date_str:
+        return None
+    value = str(expiry_date_str).strip()
+    value = re.sub(r"[\s\.]+", " ", value)
+    month_names = {
+        'jan': '01', 'feb': '02', 'mar': '03', 'apr': '04', 'may': '05', 'jun': '06',
+        'jul': '07', 'aug': '08', 'sep': '09', 'oct': '10', 'nov': '11', 'dec': '12',
+    }
+    if '/' in value or '-' in value:
+        parts = re.split(r'[/-]', value)
+        if len(parts) == 2 and len(parts[0]) == 2 and len(parts[1]) == 4:
+            return f"{parts[1]}-{parts[0].zfill(2)}"
+        elif len(parts) == 2 and len(parts[0]) == 4 and len(parts[1]) == 2:
+            return f"{parts[0]}-{parts[1].zfill(2)}"
+        elif len(parts) == 2 and len(parts[0]) == 2 and len(parts[1]) == 2:
+            return f"20{parts[1]}-{parts[0].zfill(2)}"
+        elif len(parts) == 3 and len(parts[0]) == 2 and len(parts[1]) == 2 and len(parts[2]) == 4:
+            return f"{parts[2]}-{parts[1].zfill(2)}"
+        return value
+    else:
+        pieces = value.split(' ')
+        if len(pieces) == 2:
+            mon = pieces[0].lower()[:3]
+            year = pieces[1]
+            if mon in month_names and year.isdigit() and len(year) == 4:
+                return f"{year}-{month_names[mon]}"
+    return value
+
+
+def _run_gemini_vision_ocr(contents: bytes) -> Optional[dict]:
+    api_key = os.getenv("GEMINI_API_KEY", "").strip()
+    if not api_key or api_key == "your_gemini_api_key_here":
+        return None
+
+    try:
+        import google.generativeai as genai
+        genai.configure(api_key=api_key)
+        img = Image.open(io.BytesIO(contents))
+        if img.mode != "RGB":
+            img = img.convert("RGB")
+
+        prompt = (
+            "You are an expert pharmaceutical packaging OCR AI.\n"
+            "Analyze this medication packaging image (strip, blister pack, box, or bottle).\n"
+            "Extract:\n"
+            "1. drug_name: Medicine brand or generic chemical name (e.g. Amoxicillin, Augmentin, Paracetamol, Dolo 650, Azithromycin).\n"
+            "2. expiry_date: Expiration date if visible (in MM/YYYY, YYYY-MM, or DD/MM/YYYY format). If unreadable, return null.\n"
+            "3. medicine_type: 'Tablet', 'Capsule', 'Syrup', 'Injection', 'Ointment', or 'Other'.\n"
+            "4. is_antibiotic: true if this is an antibiotic / antimicrobial medication, false otherwise.\n"
+            "5. drug_class: Pharmacological class if known (e.g. Penicillin, Macrolide, Fluoroquinolone, Analgesic, NSAID).\n\n"
+            "Respond ONLY with a valid JSON object in this format, with no markdown code blocks and no extra text:\n"
+            "{\n"
+            '  "drug_name": "...",\n'
+            '  "expiry_date": "...",\n'
+            '  "medicine_type": "Tablet",\n'
+            '  "is_antibiotic": true,\n'
+            '  "drug_class": "..."\n'
+            "}"
+        )
+
+        candidate_models = ["gemini-3.5-flash-lite", "gemini-3.5-flash", "gemini-3.8-flash"]
+        raw_text = None
+        for model_name in candidate_models:
+            try:
+                model = genai.GenerativeModel(model_name)
+                response = model.generate_content([prompt, img])
+                if response and response.text:
+                    raw_text = response.text.strip()
+                    break
+            except Exception as me:
+                print(f"[AMR-Shield] Gemini model {model_name} attempt failed: {me}")
+                continue
+
+        if not raw_text:
+            return None
+
+        # Clean markdown code blocks if present
+        cleaned = re.sub(r"^```json\s*", "", raw_text, flags=re.MULTILINE)
+        cleaned = re.sub(r"```\s*$", "", cleaned, flags=re.MULTILINE).strip()
+        match = re.search(r"\{.*\}", cleaned, re.DOTALL)
+        if match:
+            parsed = json.loads(match.group(0))
+            if parsed.get("drug_name"):
+                return parsed
+    except Exception as e:
+        print(f"[AMR-Shield] Gemini Vision OCR exception: {e}")
+
+    return None
+
+
 def _preprocess_image_for_tesseract(contents: bytes) -> Image.Image:
     img = Image.open(io.BytesIO(contents))
     img = img.convert("L")
@@ -491,11 +582,11 @@ class LeaderboardEntry(BaseModel):
 @router.get("/gemini-status")
 async def gemini_status():
     """Returns whether Gemini Vision API is configured and active."""
-    key = os.getenv("GEMINI_API_KEY", "")
+    key = os.getenv("GEMINI_API_KEY", "").strip()
     active = bool(key) and key != "your_gemini_api_key_here"
     return {
         "active": active,
-        "model": "gemini-2.0-flash" if active else None,
+        "model": "gemini-3.5-flash-lite" if active else None,
         "mode": "AI Vision OCR" if active else "Demo Mode (mock data)",
     }
 
@@ -505,85 +596,93 @@ async def analyze_medication(
     district: Optional[str] = Form(None)
 ):
     """
-    Scan a medication image. OCR via local Tesseract, then parse text with Groq.
-    Awards +10 pts (or +25 for antibiotic) to device if device_id header present.
+    Scan a medication image.
+    Uses Gemini Vision AI OCR with fallback to Tesseract+Groq and mock data.
     """
     contents = await file.read()
 
     ocr_raw = None
     drug = None
     expiry_date_str = None
-    confidence = round(random.uniform(0.82, 0.95), 2)
+    confidence = 0.95
+    source = "mock"
 
-    text = ""
+    # 1. Try Gemini Vision AI first if image has data
     if len(contents) > 100:
-        text = _extract_text_tesseract(contents)
+        gemini_res = _run_gemini_vision_ocr(contents)
+        if gemini_res and gemini_res.get("drug_name"):
+            ocr_name = gemini_res.get("drug_name")
+            expiry_date_str = _normalize_expiry_date(gemini_res.get("expiry_date"))
+            ocr_raw = {"gemini": gemini_res}
+            source = "gemini_vision"
 
-    if text:
-        try:
-            parse_result = _parse_medication_text_via_groq(text)
-            ocr_name = parse_result.get("drug_name") or _find_drug_name_in_text(text)
-            expiry_date_str = parse_result.get("expiry_date") or _find_expiry_in_text(text)
-            ocr_raw = {"text": text, "parsed": parse_result}
-
-            if expiry_date_str:
-                value = str(expiry_date_str).strip()
-                value = re.sub(r"[\s\.]+", " ", value)
-                month_names = {
-                    'jan': '01', 'feb': '02', 'mar': '03', 'apr': '04', 'may': '05', 'jun': '06',
-                    'jul': '07', 'aug': '08', 'sep': '09', 'oct': '10', 'nov': '11', 'dec': '12',
+            matched_drug = _fuzzy_match_drug(ocr_name)
+            if matched_drug:
+                drug = dict(matched_drug)
+                if gemini_res.get("medicine_type"):
+                    drug["type"] = gemini_res["medicine_type"]
+                confidence = 0.96
+            else:
+                display_name = ocr_name.strip().title()
+                is_antibiotic = bool(gemini_res.get("is_antibiotic")) or any(
+                    kw in ocr_name.lower()
+                    for kw in ["cillin", "mycin", "cycline", "floxacin", "oxacin",
+                               "azole", "conazole", "sulfa", "antibiotic", "bacteria"]
+                )
+                drug_class = gemini_res.get("drug_class") or ("Antibiotic" if is_antibiotic else "Prescription Drug")
+                hazard = 8 if is_antibiotic else 4
+                drug = {
+                    "name": display_name,
+                    "type": gemini_res.get("medicine_type") or "Tablet",
+                    "is_antibiotic": is_antibiotic,
+                    "class": drug_class,
+                    "hazard": hazard,
+                    "amr_resistance_pct": 55 if is_antibiotic else 0,
+                    "persistence": (
+                        f"{display_name} was detected via Gemini Vision AI. "
+                        + ("High environmental persistence. Take to SafeDrop pharmacy." if is_antibiotic else "Safe disposal recommended.")
+                    ),
                 }
-                if '/' in value or '-' in value:
-                    parts = re.split(r'[/-]', value)
-                    if len(parts) == 2 and len(parts[0]) == 2 and len(parts[1]) == 4:
-                        expiry_date_str = f"{parts[1]}-{parts[0].zfill(2)}"
-                    elif len(parts) == 2 and len(parts[0]) == 4 and len(parts[1]) == 2:
-                        expiry_date_str = f"{parts[0]}-{parts[1].zfill(2)}"
-                    elif len(parts) == 2 and len(parts[0]) == 2 and len(parts[1]) == 2:
-                        expiry_date_str = f"20{parts[1]}-{parts[0].zfill(2)}"
-                    elif len(parts) == 3 and len(parts[0]) == 2 and len(parts[1]) == 2 and len(parts[2]) == 4:
-                        expiry_date_str = f"{parts[2]}-{parts[1].zfill(2)}"
-                    else:
-                        expiry_date_str = value
-                else:
-                    pieces = value.split(' ')
-                    if len(pieces) == 2:
-                        mon = pieces[0].lower()[:3]
-                        year = pieces[1]
-                        if mon in month_names and year.isdigit() and len(year) == 4:
-                            expiry_date_str = f"{year}-{month_names[mon]}"
-                        else:
-                            expiry_date_str = value
-                    else:
-                        expiry_date_str = value
+                confidence = 0.92
 
-            if ocr_name:
-                drug = _fuzzy_match_drug(ocr_name)
-                if drug:
-                    confidence = 0.94
-                else:
-                    display_name = ocr_name.strip().title()
-                    drug = {
-                        "name": display_name,
-                        "type": "Tablet",
-                        "is_antibiotic": any(
+    # 2. Fall back to Tesseract + Groq if Gemini did not produce a drug
+    if drug is None and len(contents) > 100:
+        text = _extract_text_tesseract(contents)
+        if text:
+            try:
+                parse_result = _parse_medication_text_via_groq(text)
+                ocr_name = parse_result.get("drug_name") or _find_drug_name_in_text(text)
+                expiry_date_str = _normalize_expiry_date(parse_result.get("expiry_date") or _find_expiry_in_text(text))
+                ocr_raw = {"text": text, "parsed": parse_result}
+                source = "tesseract_groq"
+
+                if ocr_name:
+                    matched_drug = _fuzzy_match_drug(ocr_name)
+                    if matched_drug:
+                        drug = dict(matched_drug)
+                        confidence = 0.90
+                    else:
+                        display_name = ocr_name.strip().title()
+                        is_ab = any(
                             kw in ocr_name.lower()
                             for kw in ["cillin", "mycin", "cycline", "floxacin", "oxacin",
                                        "azole", "conazole", "sulfa", "antibiotic", "bacteria"]
-                        ),
-                        "class": "Prescription Drug",
-                        "hazard": 6,
-                        "amr_resistance_pct": 0,
-                        "persistence": f"{display_name} was detected via OCR scan. Dispose at a SafeDrop pharmacy as a precaution.",
-                    }
-                    confidence = 0.78
-        except Exception as e:
-            print(f"[AMR-Shield] Tesseract/Groq parsing failed: {e} — falling back to mock")
-            ocr_raw = None
-    else:
-        print("[AMR-Shield] No OCR text extracted from image")
+                        )
+                        drug = {
+                            "name": display_name,
+                            "type": "Tablet",
+                            "is_antibiotic": is_ab,
+                            "class": "Prescription Drug",
+                            "hazard": 7 if is_ab else 4,
+                            "amr_resistance_pct": 45 if is_ab else 0,
+                            "persistence": f"{display_name} was detected via OCR scan. Dispose at a SafeDrop pharmacy as a precaution.",
+                        }
+                        confidence = 0.78
+            except Exception as e:
+                print(f"[AMR-Shield] Tesseract/Groq parsing failed: {e}")
+                ocr_raw = None
 
-    # ── Fallback mock if OCR not available or failed ──────────────────────────
+    # 3. Fallback mock if OCR completely failed
     if drug is None:
         drug = {
             "name": "Unknown medication",
@@ -595,21 +694,17 @@ async def analyze_medication(
             "persistence": "Could not identify the medication from the image. Please verify the scanned label or use manual entry.",
         }
         confidence = 0.35
+        source = "mock"
 
     expiry_info = _compute_expiry_risk(drug["name"], expiry_date_str, drug["is_antibiotic"])
 
     # Persist scan record to Firestore for research/analytics
-    device_id = None
-    try:
-        from fastapi import Request
-    except Exception:
-        pass
     fc.save_scan_record({
         "drug_name": drug["name"],
         "is_antibiotic": drug["is_antibiotic"],
         "eco_hazard_score": drug["hazard"],
         "confidence": confidence,
-        "source": "tesseract_groq" if ocr_raw else "mock",
+        "source": source,
         "expiry_date": expiry_date_str,
         "expiry_status": expiry_info["expiry_status"],
         "ers_data": expiry_info.get("ers_data"),
