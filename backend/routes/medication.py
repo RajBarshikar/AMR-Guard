@@ -12,7 +12,18 @@ import re
 import io
 import json
 import requests
-import pytesseract
+# Compatibility shim for Python 3.14+ where pkgutil.find_loader was removed
+import pkgutil
+if not hasattr(pkgutil, "find_loader"):
+    import importlib.util
+    pkgutil.find_loader = lambda name: getattr(importlib.util.find_spec(name), "loader", None) if importlib.util.find_spec(name) else None
+
+try:
+    import pytesseract
+    _has_tesseract = True
+except Exception:
+    pytesseract = None
+    _has_tesseract = False
 from PIL import Image, ImageEnhance, ImageFilter
 from datetime import datetime, timezone, date
 from typing import List, Optional
@@ -201,6 +212,8 @@ def _preprocess_image_for_tesseract(contents: bytes) -> Image.Image:
 
 
 def _extract_text_tesseract(contents: bytes) -> str:
+    if not _has_tesseract or pytesseract is None:
+        return ""
     try:
         img = _preprocess_image_for_tesseract(contents)
         text = pytesseract.image_to_string(img, lang="eng", config="--psm 6")
