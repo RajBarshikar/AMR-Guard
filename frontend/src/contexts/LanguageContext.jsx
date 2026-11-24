@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 
 const translations = {
   en: {
-    app_name: 'AMR-Shield',
+    app_name: 'AMR-Guard',
     tagline: 'Secure Disposal, Stronger Nation',
     welcome_subtitle: 'Scan your medications, check their environmental hazard, and find the nearest SafeDrop Pharmacy — no login required.',
     select_language: 'Select Language',

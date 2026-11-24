@@ -183,7 +183,7 @@ def _run_gemini_vision_ocr(contents: bytes) -> Optional[dict]:
                     raw_text = response.text.strip()
                     break
             except Exception as me:
-                print(f"[AMR-Shield] Gemini model {model_name} attempt failed: {me}")
+                print(f"[AMR-Guard] Gemini model {model_name} attempt failed: {me}")
                 continue
 
         if not raw_text:
@@ -198,7 +198,7 @@ def _run_gemini_vision_ocr(contents: bytes) -> Optional[dict]:
             if parsed.get("drug_name"):
                 return parsed
     except Exception as e:
-        print(f"[AMR-Shield] Gemini Vision OCR exception: {e}")
+        print(f"[AMR-Guard] Gemini Vision OCR exception: {e}")
 
     return None
 
@@ -219,7 +219,7 @@ def _extract_text_tesseract(contents: bytes) -> str:
         text = pytesseract.image_to_string(img, lang="eng", config="--psm 6")
         return text.strip()
     except Exception as e:
-        print(f"[AMR-Shield] Tesseract OCR failed: {e}")
+        print(f"[AMR-Guard] Tesseract OCR failed: {e}")
         return ""
 
 
@@ -282,7 +282,7 @@ def _parse_medication_text_via_groq(text: str) -> dict:
             timeout=15,
         )
         if response.status_code != 200:
-            print(f"[AMR-Shield] Groq parse failed: {response.status_code} {response.text}")
+            print(f"[AMR-Guard] Groq parse failed: {response.status_code} {response.text}")
             return result
 
         data = response.json()
@@ -298,7 +298,7 @@ def _parse_medication_text_via_groq(text: str) -> dict:
                 "expiry_date": parsed.get("expiry_date"),
             }
     except Exception as e:
-        print(f"[AMR-Shield] Groq parse exception: {e}")
+        print(f"[AMR-Guard] Groq parse exception: {e}")
 
     return result
 
@@ -692,7 +692,7 @@ async def analyze_medication(
                         }
                         confidence = 0.78
             except Exception as e:
-                print(f"[AMR-Shield] Tesseract/Groq parsing failed: {e}")
+                print(f"[AMR-Guard] Tesseract/Groq parsing failed: {e}")
                 ocr_raw = None
 
     # 3. Fallback mock if OCR completely failed
@@ -1119,7 +1119,7 @@ async def nearest_bins(lat: float = Query(...), lng: float = Query(...)):
                 centres.sort(key=lambda x: x.distance_km)
                 return centres[:5]
     except Exception as e:
-        print(f"[AMR-Shield] Overpass API failed: {e} — using fallback")
+        print(f"[AMR-Guard] Overpass API failed: {e} — using fallback")
 
     # ── Fallback: offset-based mock data ────────────────────────────────────
     centres = []
